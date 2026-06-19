@@ -547,17 +547,23 @@ html[dir="rtl"] .stat-item:last-child { border-left: none; }
 
 @media (max-width: 760px) {
   nav {
-    padding: 0 4vw; gap: 0;
+    padding: 0 5vw;
+    gap: 0;
     justify-content: space-between;
   }
-  /* Unwrap nav-right so lang-toggle and hamburger become direct flex children */
-  .nav-right { display: contents; }
-  /* Order: [1] lang-toggle | [2] logo | [3] hamburger */
-  .lang-toggle { order: 1; flex-shrink: 0; }
-  .nav-logo   { order: 2; flex: 1; display: flex; justify-content: center; }
-  .nav-toggle { order: 3; flex-shrink: 0; display: flex; margin-left: 0; }
+  /* Nav-right stays as a flex group on the right: [عربي][☰] */
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    order: unset;
+  }
+  /* Reset any order overrides from previous attempts */
+  .nav-logo   { order: unset; flex: unset; justify-content: unset; display: flex; }
+  .lang-toggle { order: unset; }
+  .nav-toggle { order: unset; display: flex; }
+  /* Mobile dropdown */
   .nav-links {
-    order: 4;
     display: none; flex-direction: column;
     position: absolute; top: 68px; left: 0; right: 0;
     background: rgba(20, 58, 22, .98);
