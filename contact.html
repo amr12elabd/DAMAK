@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact DAMAK – Agricultural Development, Egypt</title>
+  <meta name="description" content="Get in touch with DAMAK's agronomic team for product enquiries, technical support, distribution partnerships, or land development projects across Egypt." />
+  <meta property="og:title" content="Contact DAMAK – Agricultural Development Egypt" />
+  <meta property="og:description" content="Reach DAMAK's team for product information, agronomic advice, or distribution enquiries." />
+  <meta property="og:url" content="https://amr12elabd.github.io/DAMAK/contact.html" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%231a4a1f'/><path d='M32 52 C32 52 14 38 14 24 C14 16 22 10 32 14 C42 10 50 16 50 24 C50 38 32 52 32 52Z' fill='%234caf50'/><path d='M32 52 L32 24' stroke='%23c8a84b' stroke-width='2.5' stroke-linecap='round'/><path d='M32 36 C32 36 24 30 20 24' stroke='%23c8a84b' stroke-width='2' stroke-linecap='round' fill='none'/><path d='M32 30 C32 30 40 26 44 20' stroke='%23c8a84b' stroke-width='2' stroke-linecap='round' fill='none'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/damak.css" />
+  <style>
+    /* ── CONTACT PAGE ── */
+    .contact-layout {
+      display: grid; grid-template-columns: 1fr 1.4fr;
+      gap: 3.5rem; max-width: var(--max-w); margin-inline: auto; align-items: start;
+    }
+
+    /* Info column */
+    .contact-info-col h2 {
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      color: var(--green-dark); margin-bottom: .8rem;
+    }
+    .contact-info-col > p { color: var(--muted); margin-bottom: 2rem; }
+    .contact-detail {
+      display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.2rem;
+    }
+    .contact-detail .ci {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: var(--green-pale); color: var(--green-mid);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; flex-shrink: 0;
+    }
+    .contact-detail h4 { font-size: .82rem; color: var(--green-dark); margin-bottom: .2rem; font-family: 'Inter', sans-serif; font-weight: 700; }
+    .contact-detail p, .contact-detail a { font-size: .9rem; color: var(--muted); text-decoration: none; }
+    .contact-detail a { color: var(--green-mid); font-weight: 600; }
+    .contact-detail a:hover { text-decoration: underline; }
+
+    .hours-box {
+      background: var(--cream); border-radius: 12px; padding: 1.4rem;
+      margin-top: 2rem; border: 1px solid var(--border);
+    }
+    .hours-box h4 { color: var(--green-dark); font-size: .9rem; margin-bottom: .7rem; }
+    .hours-row { display: flex; justify-content: space-between; font-size: .85rem; padding: .35rem 0; border-bottom: 1px solid var(--border); }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-row .day { color: var(--text); font-weight: 500; }
+    .hours-row .time { color: var(--muted); }
+
+    /* Form */
+    .contact-form-wrap {
+      background: #fff; border-radius: var(--radius);
+      padding: 2.8rem; box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+    }
+    .contact-form-wrap h3 {
+      font-family: 'Fraunces', serif; color: var(--green-dark);
+      font-size: 1.5rem; margin-bottom: .4rem;
+    }
+    .contact-form-wrap > p { color: var(--muted); font-size: .9rem; margin-bottom: 1.8rem; }
+
+    /* Inquiry type grid */
+    .inquiry-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: .6rem; margin-bottom: 1.2rem;
+    }
+    .inquiry-opt {
+      text-align: center; padding: .7rem .4rem; border-radius: 8px;
+      border: 1.5px solid var(--border); font-size: .78rem;
+      font-weight: 600; color: var(--muted); cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: border-color .2s, background .2s, color .2s;
+    }
+    .inquiry-opt:hover, .inquiry-opt.selected {
+      border-color: var(--green-mid); background: var(--green-pale); color: var(--green-dark);
+    }
+    .inquiry-opt .io-icon { font-size: 1.3rem; display: block; margin-bottom: .25rem; }
+
+    /* Map placeholder */
+    .map-placeholder {
+      background: linear-gradient(135deg, var(--green-dark), #2a6030);
+      border-radius: var(--radius); min-height: 280px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center; padding: 2rem;
+      position: relative; overflow: hidden;
+    }
+    .map-placeholder::before {
+      content: ''; position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .map-placeholder .map-pin { font-size: 2.5rem; margin-bottom: .8rem; position: relative; }
+    .map-placeholder p { color: #a5d6a5; font-size: .9rem; position: relative; }
+    .map-placeholder a {
+      position: relative; display: inline-block; margin-top: 1rem;
+      color: var(--gold); font-weight: 700; text-decoration: none; font-size: .88rem;
+      border: 1px solid rgba(200,168,75,.4); padding: .4rem 1.2rem; border-radius: 2rem;
+      transition: background .2s;
+    }
+    .map-placeholder a:hover { background: rgba(200,168,75,.15); }
+
+    /* Distributors section */
+    #distributors { scroll-margin-top: 80px; }
+    .gov-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1rem; max-width: var(--max-w); margin-inline: auto;
+    }
+    .gov-card {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 10px; padding: 1.1rem 1.2rem;
+      display: flex; align-items: center; gap: .8rem;
+      transition: box-shadow .2s, border-color .2s;
+    }
+    .gov-card:hover { box-shadow: var(--shadow-sm); border-color: var(--green-light); }
+    .gov-card .dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--green-light); flex-shrink: 0;
+    }
+    .gov-card .dot.partial { background: var(--gold); }
+    .gov-card span { font-size: .88rem; font-weight: 600; color: var(--text); }
+    .gov-legend {
+      display: flex; gap: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;
+      max-width: var(--max-w); margin-inline: auto;
+    }
+    .gov-legend .leg { display: flex; align-items: center; gap: .5rem; font-size: .8rem; color: var(--muted); }
+    .gov-legend .ldot { width: 10px; height: 10px; border-radius: 50%; }
+
+    @media (max-width: 900px) {
+      .contact-layout { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .inquiry-grid { grid-template-columns: 1fr 1fr; }
+      .contact-form-wrap { padding: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">DAMAK<sup>®</sup></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="sustainability.html">Sustainability</a></li>
+    <li><a href="insights.html">Insights</a></li>
+    <li><a href="contact.html" class="nav-cta active">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="lang-toggle">EN | عر</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> › <span>Contact</span></div>
+  <h1>Let's <em>Talk Agriculture</em></h1>
+  <p>Whether you're a farmer looking for the right product programme, a distributor exploring new lines, or an investor interested in agricultural land development — our team responds within one business day.</p>
+</div>
+
+<!-- MAIN CONTACT SECTION -->
+<section class="section section-cream">
+  <div class="contact-layout">
+
+    <!-- Info -->
+    <div class="contact-info-col reveal-left">
+      <h2>Get in Touch</h2>
+      <p>Our agronomists and commercial team are here to help — in Arabic and English.</p>
+
+      <div class="contact-detail">
+        <div class="ci">📧</div>
+        <div><h4>Email</h4><a href="mailto:amr12elabd@gmail.com">amr12elabd@gmail.com</a></div>
+      </div>
+
+      <div class="contact-detail">
+        <!-- PLACEHOLDER: add phone number once confirmed by the family -->
+        <div class="ci">📞</div>
+        <div><h4>Phone</h4><p>[Phone number — confirm with family before publishing]</p></div>
+      </div>
+
+      <div class="contact-detail">
+        <!-- PLACEHOLDER: add full mailing/registered address once confirmed -->
+        <div class="ci">📍</div>
+        <div><h4>Address</h4><p>Egypt — serving 8 governorates nationwide.<br/>[Full registered address — confirm with family]</p></div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="ci">🌐</div>
+        <div><h4>GitHub</h4><a href="https://github.com/amr12elabd/DAMAK" target="_blank" rel="noopener">github.com/amr12elabd/DAMAK</a></div>
+      </div>
+
+      <div class="hours-box">
+        <h4>Working Hours</h4>
+        <div class="hours-row"><span class="day">Sunday – Thursday</span><span class="time">8:00 AM – 5:00 PM EET</span></div>
+        <div class="hours-row"><span class="day">Friday</span><span class="time">Closed</span></div>
+        <div class="hours-row"><span class="day">Saturday</span><span class="time">Closed</span></div>
+      </div>
+
+      <!-- Map placeholder -->
+      <div class="map-placeholder" style="margin-top:2rem">
+        <!-- PLACEHOLDER: embed a real Google Maps iframe once the registered address is confirmed.
+             Replace this entire div with an <iframe> from Google Maps embed code. -->
+        <div class="map-pin">📍</div>
+        <p>DAMAK Agricultural Development<br/>Egypt</p>
+        <a href="https://www.google.com/maps/search/Egypt" target="_blank" rel="noopener">Open in Google Maps →</a>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <!-- FORM NOTE: This is a front-end-only form.
+         To make it functional, choose one of:
+         (a) Add action="https://formspree.io/f/YOUR_FORM_ID" method="POST" — create account at formspree.io
+         (b) Use Netlify Forms: add netlify attribute if hosting on Netlify
+         (c) Wire to a custom serverless function endpoint (AWS Lambda, Vercel Functions, etc.)
+         Until a handler is connected, the form validates on the client but sends nothing. -->
+    <div class="contact-form-wrap reveal-right">
+      <h3>Send Us a Message</h3>
+      <p>Select your enquiry type below and fill in the details — our team will respond within one business day.</p>
+
+      <div class="inquiry-grid" id="inquiryGrid">
+        <div class="inquiry-opt selected" data-val="product"><span class="io-icon">🌿</span>Product Info</div>
+        <div class="inquiry-opt" data-val="sample"><span class="io-icon">📦</span>Sample Request</div>
+        <div class="inquiry-opt" data-val="distribution"><span class="io-icon">🤝</span>Distribution</div>
+        <div class="inquiry-opt" data-val="technical"><span class="io-icon">🔬</span>Technical Support</div>
+        <div class="inquiry-opt" data-val="land"><span class="io-icon">🏗️</span>Land Development</div>
+        <div class="inquiry-opt" data-val="other"><span class="io-icon">💬</span>Other</div>
+      </div>
+
+      <form id="contactForm" novalidate>
+        <input type="hidden" id="inquiryType" name="inquiry_type" value="product" />
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name *</label>
+            <input type="text" id="fname" name="first_name" placeholder="Ahmed" required />
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="last_name" placeholder="Hassan" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="+20 1xx xxx xxxx" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="gov">Governorate</label>
+          <select id="gov" name="governorate">
+            <option value="">Select your governorate…</option>
+            <option>Cairo</option><option>Giza</option><option>Alexandria</option>
+            <option>Sharqia</option><option>Dakahlia</option><option>Gharbia</option>
+            <option>Beheira</option><option>Minya</option><option>Fayoum</option>
+            <option>Assiut</option><option>Sohag</option><option>Qena</option>
+            <option>Luxor</option><option>Aswan</option><option>Red Sea</option>
+            <option>North Sinai</option><option>South Sinai</option>
+            <option>Matrouh</option><option>New Valley</option><option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" placeholder="Tell us about your farm, crop, current challenge, or question…" required></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send Message →</button>
+        <p class="form-note">We respond within one business day. Your information is never shared with third parties.</p>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- DISTRIBUTORS SECTION -->
+<section class="section section-white" id="distributors">
+  <div class="section-title reveal">
+    <h2>Where We Operate</h2>
+    <div class="accent-line"></div>
+    <p>DAMAK products and technical services are currently active across these Egyptian governorates.</p>
+  </div>
+
+  <!-- PLACEHOLDER: The governorate coverage list below is based on the "8 governorates" figure
+       confirmed in existing content. Specific governorate names and distributor contacts need
+       to be confirmed with the family before publishing. Active vs. partial coverage status
+       also needs verification. -->
+  <div class="gov-legend reveal">
+    <div class="leg"><div class="ldot" style="background:var(--green-light)"></div> Full coverage</div>
+    <div class="leg"><div class="ldot" style="background:var(--gold)"></div> Partial / expanding</div>
+  </div>
+  <div class="gov-grid">
+    <!-- PLACEHOLDER: replace with confirmed governorate list and coverage status -->
+    <div class="gov-card reveal d1"><div class="dot"></div><span>Cairo [PLACEHOLDER]</span></div>
+    <div class="gov-card reveal d2"><div class="dot"></div><span>Giza [PLACEHOLDER]</span></div>
+    <div class="gov-card reveal d3"><div class="dot"></div><span>Sharqia [PLACEHOLDER]</span></div>
+    <div class="gov-card reveal d1"><div class="dot"></div><span>Dakahlia [PLACEHOLDER]</span></div>
+    <div class="gov-card reveal d2"><div class="dot partial"></div><span>Beheira [PLACEHOLDER]</span></div>
+    <div class="gov-card reveal d3"><div class="dot partial"></div><span>Minya [PLACEHOLDER]</span></div>
+    <div class="gov-card reveal d1"><div class="dot partial"></div><span>Fayoum [PLACEHOLDER]</span></div>
+    <div class="gov-card reveal d2"><div class="dot partial"></div><span>Assiut [PLACEHOLDER]</span></div>
+  </div>
+
+  <div style="text-align:center; margin-top:2.5rem" class="reveal">
+    <p style="color:var(--muted); margin-bottom:1rem; font-size:.9rem;">Interested in becoming a DAMAK distributor in your governorate?</p>
+    <a href="#contactForm" class="btn btn-secondary btn-sm">Apply for Distribution Rights</a>
+  </div>
+</section>
+
+<!-- INQUIRY TYPES -->
+<section class="section section-cream">
+  <div class="section-title reveal">
+    <h2>How We Can Help</h2>
+    <div class="accent-line"></div>
+    <p>Not sure what to ask? Here's what our team handles most.</p>
+  </div>
+  <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1.5rem; max-width:var(--max-w); margin-inline:auto;">
+    <div class="card" style="padding:1.8rem; text-align:center;" class="reveal">
+      <div style="font-size:2rem;margin-bottom:.8rem">🌿</div>
+      <h3 style="color:var(--green-dark);font-size:1rem;margin-bottom:.4rem">Product Selection</h3>
+      <p style="font-size:.85rem;color:var(--muted)">Tell us your crop, growth stage, and problem — we'll recommend the right product and timing.</p>
+    </div>
+    <div class="card" style="padding:1.8rem; text-align:center;">
+      <div style="font-size:2rem;margin-bottom:.8rem">📦</div>
+      <h3 style="color:var(--green-dark);font-size:1rem;margin-bottom:.4rem">Sample Requests</h3>
+      <p style="font-size:.85rem;color:var(--muted)">We offer trial quantities to qualifying farmers and distributors so you can evaluate results before committing.</p>
+    </div>
+    <div class="card" style="padding:1.8rem; text-align:center;">
+      <div style="font-size:2rem;margin-bottom:.8rem">🤝</div>
+      <h3 style="color:var(--green-dark);font-size:1rem;margin-bottom:.4rem">Distribution</h3>
+      <p style="font-size:.85rem;color:var(--muted)">We're actively seeking regional distribution partners. We support our distributors with training, materials, and field agronomy backup.</p>
+    </div>
+    <div class="card" style="padding:1.8rem; text-align:center;">
+      <div style="font-size:2rem;margin-bottom:.8rem">🏗️</div>
+      <h3 style="color:var(--green-dark);font-size:1rem;margin-bottom:.4rem">Land Development</h3>
+      <p style="font-size:.85rem;color:var(--muted)">From site assessment and reclamation planning to irrigation design — our team takes on complex land projects across Egypt.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo">DAMAK<sup>®</sup></span>
+      <p>Advanced plant growth solutions and end-to-end agricultural development for Egypt's farming communities — since 2011.</p>
+      <span class="footer-tagline">Growing Egypt's Future</span>
+    </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <ul>
+        <li><a href="products.html#power-contanol">Power Contanol</a></li>
+        <li><a href="products.html#macovit-drw">Macovit DRW</a></li>
+        <li><a href="products.html#sinolide-one">Sinolide One</a></li>
+        <li><a href="products.html#trimax">Trimax</a></li>
+        <li><a href="products.html#damak-indole">Damak Indole</a></li>
+        <li><a href="products.html">View All →</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About DAMAK</a></li>
+        <li><a href="about.html#timeline">Our History</a></li>
+        <li><a href="about.html#team">Leadership</a></li>
+        <li><a href="sustainability.html">Sustainability</a></li>
+        <li><a href="insights.html">Insights</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="contact.html">Get in Touch</a></li>
+        <li><a href="#distributors">Find a Distributor</a></li>
+        <li><a href="mailto:amr12elabd@gmail.com">amr12elabd@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="copy">&copy; 2026 <em>DAMAK</em> Agricultural Development. All rights reserved.</span>
+    <div class="links"><a href="sustainability.html">Sustainability</a><a href="contact.html">Contact</a></div>
+  </div>
+</footer>
+
+<script src="assets/damak.js"></script>
+<script>
+  /* Inquiry type selector */
+  document.querySelectorAll('.inquiry-opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.inquiry-opt').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      document.getElementById('inquiryType').value = btn.dataset.val;
+    });
+  });
+</script>
+</body>
+</html>

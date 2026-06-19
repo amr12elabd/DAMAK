@@ -3,1147 +3,414 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- ── SEO ── -->
   <title>DAMAK – Agricultural Development & Plant Growth Solutions, Egypt</title>
   <meta name="description" content="DAMAK provides advanced plant growth regulators, agronomic consulting, irrigation systems, and land reclamation services across Egypt. Trusted by farmers in 8 governorates." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://amr12elabd.github.io/DAMAK/" />
-
-  <!-- ── Open Graph ── -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://amr12elabd.github.io/DAMAK/" />
-  <meta property="og:title" content="DAMAK – Agricultural Development & Plant Growth Solutions" />
+  <meta property="og:title" content="DAMAK – Agricultural Development & Plant Growth Solutions, Egypt" />
   <meta property="og:description" content="Advanced plant growth regulators and end-to-end agricultural development services for Egyptian farmers." />
-  <meta property="og:image" content="https://amr12elabd.github.io/DAMAK/og-image.png" />
+  <meta property="og:image" content="https://amr12elabd.github.io/DAMAK/assets/og-home.png" />
   <meta property="og:locale" content="en_EG" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="DAMAK – Agricultural Development" />
   <meta name="twitter:description" content="Advanced plant growth regulators and agro services across Egypt." />
-
-  <!-- ── Favicon (inline SVG) ── -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%231a4a1f'/><path d='M32 52 C32 52 14 38 14 24 C14 16 22 10 32 14 C42 10 50 16 50 24 C50 38 32 52 32 52Z' fill='%234caf50'/><path d='M32 52 L32 24' stroke='%23c8a84b' stroke-width='2.5' stroke-linecap='round'/><path d='M32 36 C32 36 24 30 20 24' stroke='%23c8a84b' stroke-width='2' stroke-linecap='round' fill='none'/><path d='M32 30 C32 30 40 26 44 20' stroke='%23c8a84b' stroke-width='2' stroke-linecap='round' fill='none'/></svg>" />
-
-  <!-- ── Schema.org ── -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "DAMAK Agricultural Development",
-    "url": "https://amr12elabd.github.io/DAMAK/",
-    "logo": "https://amr12elabd.github.io/DAMAK/data:image/svg+xml,...",
-    "description": "DAMAK provides plant growth regulators, agronomic consulting, irrigation systems, and land reclamation across Egypt.",
-    "address": { "@type": "PostalAddress", "addressCountry": "EG" },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "email": "amr12elabd@gmail.com",
-      "contactType": "customer support",
-      "availableLanguage": ["Arabic", "English"]
-    },
-    "areaServed": "EG",
-    "sameAs": ["https://github.com/amr12elabd/DAMAK"]
-  }
+  {"@context":"https://schema.org","@type":"Organization","name":"DAMAK Agricultural Development","url":"https://amr12elabd.github.io/DAMAK/","description":"DAMAK provides plant growth regulators, agronomic consulting, irrigation and land reclamation across Egypt.","address":{"@type":"PostalAddress","addressCountry":"EG"},"contactPoint":{"@type":"ContactPoint","email":"amr12elabd@gmail.com","contactType":"customer support","availableLanguage":["Arabic","English"]},"areaServed":"EG","foundingDate":"2011","sameAs":["https://github.com/amr12elabd/DAMAK"]}
   </script>
-
-  <!-- ── Fonts ── -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%231a4a1f'/><path d='M32 52 C32 52 14 38 14 24 C14 16 22 10 32 14 C42 10 50 16 50 24 C50 38 32 52 32 52Z' fill='%234caf50'/><path d='M32 52 L32 24' stroke='%23c8a84b' stroke-width='2.5' stroke-linecap='round'/><path d='M32 36 C32 36 24 30 20 24' stroke='%23c8a84b' stroke-width='2' stroke-linecap='round' fill='none'/><path d='M32 30 C32 30 40 26 44 20' stroke='%23c8a84b' stroke-width='2' stroke-linecap='round' fill='none'/></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/damak.css" />
   <style>
-    /* ══════════════════════════════════════════
-       RESET & TOKENS
-    ══════════════════════════════════════════ */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --green-dark:   #1a4a1f;
-      --green-mid:    #2d7a35;
-      --green-light:  #4caf50;
-      --green-pale:   #e8f5e9;
-      --gold:         #c8a84b;
-      --gold-light:   #e8cc7a;
-      --cream:        #f9f5ec;
-      --cream-dark:   #f0ead8;
-      --text:         #1c1c1c;
-      --muted:        #5a5a5a;
-      --border:       #ddd8cc;
-      --radius:       14px;
-      --shadow-sm:    0 2px 12px rgba(0,0,0,.07);
-      --shadow-md:    0 6px 28px rgba(0,0,0,.11);
-      --shadow-lg:    0 16px 48px rgba(0,0,0,.14);
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', 'Segoe UI', sans-serif;
-      color: var(--text);
-      background: #fff;
-      line-height: 1.65;
-      overflow-x: hidden;
-    }
-
-    h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
-
-    img { max-width: 100%; display: block; }
-    a { color: inherit; }
-
-    /* ══════════════════════════════════════════
-       SCROLL ANIMATIONS
-    ══════════════════════════════════════════ */
-    .reveal {
-      opacity: 0;
-      transform: translateY(32px);
-      transition: opacity .65s ease, transform .65s ease;
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: none;
-    }
-    .reveal-left  { opacity: 0; transform: translateX(-40px); transition: opacity .65s ease, transform .65s ease; }
-    .reveal-right { opacity: 0; transform: translateX(40px);  transition: opacity .65s ease, transform .65s ease; }
-    .reveal-left.visible, .reveal-right.visible { opacity: 1; transform: none; }
-    .reveal-delay-1 { transition-delay: .1s; }
-    .reveal-delay-2 { transition-delay: .2s; }
-    .reveal-delay-3 { transition-delay: .3s; }
-    .reveal-delay-4 { transition-delay: .4s; }
-
-    /* ══════════════════════════════════════════
-       NAV
-    ══════════════════════════════════════════ */
-    nav {
-      position: sticky; top: 0; z-index: 200;
-      background: rgba(26, 74, 31, .97);
-      backdrop-filter: blur(10px);
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 6vw;
-      height: 68px;
-      border-bottom: 1px solid rgba(200,168,75,.2);
-    }
-    .nav-logo {
-      font-family: 'Fraunces', serif;
-      font-size: 1.7rem; font-weight: 900; letter-spacing: 3px;
-      color: var(--gold); text-decoration: none;
-    }
-    .nav-logo sup {
-      font-size: .45em; vertical-align: super;
-      letter-spacing: 1px; color: var(--gold-light);
-      font-family: 'Inter', sans-serif; font-weight: 600;
-    }
-    .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
-    .nav-links a {
-      color: #d8e8d8; text-decoration: none; font-size: .9rem; font-weight: 500;
-      letter-spacing: .3px;
-      transition: color .2s;
-    }
-    .nav-links a:hover { color: var(--gold); }
-    .nav-cta {
-      background: var(--gold); color: var(--green-dark) !important;
-      font-weight: 700 !important;
-      padding: .45rem 1.2rem; border-radius: 2rem;
-      transition: background .2s, transform .15s !important;
-    }
-    .nav-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
-
-    /* mobile hamburger */
-    .nav-toggle {
-      display: none; flex-direction: column; gap: 5px; cursor: pointer;
-      background: none; border: none; padding: 4px;
-    }
-    .nav-toggle span {
-      display: block; width: 24px; height: 2px;
-      background: var(--gold); border-radius: 2px;
-      transition: transform .3s, opacity .3s;
-    }
-    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .nav-toggle.open span:nth-child(2) { opacity: 0; }
-    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-    /* ══════════════════════════════════════════
-       HERO
-    ══════════════════════════════════════════ */
+    /* ── HOME-SPECIFIC ── */
     .hero {
       min-height: 94vh;
       background:
         radial-gradient(ellipse at 70% 40%, rgba(76,175,80,.18) 0%, transparent 60%),
-        linear-gradient(150deg, #0d2e10 0%, #1a4a1f 35%, #2d7a35 75%, #3d9142 100%);
+        linear-gradient(150deg, #0a2010 0%, #1a4a1f 35%, #2d7a35 72%, #3d9142 100%);
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
-      text-align: center; padding: 6rem 6vw 4rem;
+      text-align: center; padding: 6rem clamp(1.2rem,6vw,4rem) 4rem;
       position: relative; overflow: hidden;
     }
-
-    /* Growth-curve SVG motif */
     .hero::after {
-      content: '';
-      position: absolute; bottom: -2px; left: 0; right: 0;
-      height: 90px;
-      background: #fff;
+      content: ''; position: absolute; bottom: -1px; left: 0; right: 0;
+      height: 90px; background: #fff;
       clip-path: ellipse(55% 100% at 50% 100%);
     }
-
-    /* Subtle leaf-pattern overlay */
-    .hero-pattern {
-      position: absolute; inset: 0; pointer-events: none; overflow: hidden;
-    }
-    .hero-pattern svg { position: absolute; opacity: .06; }
-
+    .hero-pattern { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+    .hero-pattern svg { position: absolute; opacity: .055; }
     .hero-badge {
       display: inline-flex; align-items: center; gap: .5rem;
-      background: rgba(200,168,75,.15);
-      border: 1px solid rgba(200,168,75,.45);
-      color: var(--gold-light);
-      font-size: .75rem; letter-spacing: 3px; text-transform: uppercase;
-      font-weight: 600;
-      padding: .4rem 1.3rem; border-radius: 2rem; margin-bottom: 1.8rem;
-      font-family: 'Inter', sans-serif;
+      background: rgba(200,168,75,.14); border: 1px solid rgba(200,168,75,.4);
+      color: var(--gold-light); font-size: .74rem; letter-spacing: 3px;
+      text-transform: uppercase; font-weight: 600; font-family: 'Inter', sans-serif;
+      padding: .38rem 1.3rem; border-radius: 2rem; margin-bottom: 1.8rem;
     }
-    .hero-badge::before { content: '●'; font-size: .45rem; animation: pulse 2s infinite; }
-    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
-
+    .hero-badge::before { content: '●'; font-size: .4rem; animation: blink 2s infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.25} }
     .hero h1 {
-      font-size: clamp(2.6rem, 6.5vw, 5rem);
+      font-size: clamp(2.6rem, 6.5vw, 5.2rem);
       color: #fff; font-weight: 900; letter-spacing: -.5px;
-      margin-bottom: 1rem; line-height: 1.08;
+      margin-bottom: .9rem; line-height: 1.07;
     }
     .hero h1 em { color: var(--gold); font-style: italic; }
-    .hero p {
-      max-width: 560px; color: #b8d8b8;
-      font-size: clamp(1rem, 2vw, 1.15rem); margin-bottom: 2.5rem;
-      font-weight: 400;
+    .hero > p {
+      max-width: 560px; color: #b0d4b0;
+      font-size: clamp(.98rem, 2vw, 1.15rem); margin-bottom: 2.4rem;
     }
     .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
-
-    .btn {
-      display: inline-flex; align-items: center; gap: .5rem;
-      font-weight: 700; font-size: .95rem; font-family: 'Inter', sans-serif;
-      padding: .9rem 2.2rem; border-radius: 2rem;
-      text-decoration: none;
-      transition: transform .15s, box-shadow .15s, background .15s;
-      cursor: pointer; border: none;
-    }
-    .btn-primary {
-      background: var(--gold); color: var(--green-dark);
-      box-shadow: 0 4px 20px rgba(200,168,75,.4);
-    }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(200,168,75,.55); }
-    .btn-outline {
-      background: transparent; color: #fff;
-      border: 1.5px solid rgba(255,255,255,.4);
-    }
-    .btn-outline:hover { background: rgba(255,255,255,.08); transform: translateY(-2px); }
-
     .hero-scroll {
-      position: absolute; bottom: 100px; left: 50%; transform: translateX(-50%);
-      color: rgba(255,255,255,.4); font-size: .75rem; letter-spacing: 2px;
+      position: absolute; bottom: 106px; left: 50%; transform: translateX(-50%);
+      color: rgba(255,255,255,.35); font-size: .7rem; letter-spacing: 2px;
       text-transform: uppercase; font-family: 'Inter', sans-serif;
       display: flex; flex-direction: column; align-items: center; gap: .5rem;
     }
     .hero-scroll::after {
-      content: '';
-      display: block; width: 1px; height: 40px;
+      content: ''; display: block; width: 1px; height: 38px;
       background: linear-gradient(to bottom, rgba(255,255,255,.3), transparent);
-      animation: scrollLine 1.8s ease-in-out infinite;
+      animation: scrollLine 1.9s ease-in-out infinite;
     }
-    @keyframes scrollLine { 0%{transform:scaleY(0);transform-origin:top} 50%{transform:scaleY(1);transform-origin:top} 51%{transform-origin:bottom} 100%{transform:scaleY(0);transform-origin:bottom} }
-
-    /* ══════════════════════════════════════════
-       SHARED SECTION
-    ══════════════════════════════════════════ */
-    section { padding: 5.5rem 6vw; }
-    .section-title { text-align: center; margin-bottom: 3.5rem; }
-    .section-title h2 {
-      font-size: clamp(1.8rem, 3.5vw, 2.7rem);
-      color: var(--green-dark); font-weight: 900; letter-spacing: -.3px;
-    }
-    .section-title p {
-      color: var(--muted); margin-top: .6rem;
-      max-width: 520px; margin-inline: auto;
-      font-size: 1rem;
-    }
-    .accent-line {
-      width: 56px; height: 3px;
-      background: linear-gradient(to right, var(--gold), var(--gold-light));
-      border-radius: 2px; margin: .9rem auto 0;
+    @keyframes scrollLine {
+      0%{transform:scaleY(0);transform-origin:top}
+      50%{transform:scaleY(1);transform-origin:top}
+      51%{transform-origin:bottom}
+      100%{transform:scaleY(0);transform-origin:bottom}
     }
 
-    /* ══════════════════════════════════════════
-       ABOUT
-    ══════════════════════════════════════════ */
-    .about { background: var(--cream); }
-    .about-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 2rem; max-width: 1000px; margin-inline: auto;
+    /* ── WHO WE ARE TEASER ── */
+    .about-teaser { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; max-width: var(--max-w); margin-inline: auto; align-items: center; }
+    .about-teaser-text h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); color: var(--green-dark); margin-bottom: 1rem; }
+    .about-teaser-text p { color: var(--muted); margin-bottom: 1rem; }
+    .about-pillars { display: flex; flex-direction: column; gap: .8rem; margin-top: 1.5rem; }
+    .about-pill {
+      display: flex; align-items: center; gap: .8rem;
+      padding: .85rem 1.1rem; background: var(--green-pale);
+      border-radius: 10px; border-left: 3px solid var(--green-light);
     }
-    .about-card {
+    .about-pill .ico { font-size: 1.3rem; }
+    .about-pill p { font-size: .9rem; color: var(--text); margin: 0; }
+    .about-visual {
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 100%);
+      border-radius: 20px; padding: 2.5rem; min-height: 340px;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      position: relative; overflow: hidden;
+    }
+    .about-visual::before {
+      content: '';
+      position: absolute; top: -40px; right: -40px;
+      width: 220px; height: 220px;
+      background: rgba(200,168,75,.1); border-radius: 50%;
+    }
+    .about-visual blockquote {
+      color: #fff; font-family: 'Fraunces', serif;
+      font-size: 1.25rem; font-style: italic; line-height: 1.5;
+      position: relative; z-index: 1;
+    }
+    .about-visual cite { display: block; margin-top: .6rem; font-size: .8rem; color: var(--gold-light); font-style: normal; font-family: 'Inter', sans-serif; }
+
+    /* ── FEATURED PRODUCTS ── */
+    .feat-products { max-width: var(--max-w); margin-inline: auto; }
+    .feat-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem; margin-bottom: 2.5rem;
+    }
+    .feat-card {
       background: #fff; border-radius: var(--radius);
-      padding: 2.2rem; box-shadow: var(--shadow-sm);
-      border-top: 4px solid var(--green-light);
+      border: 1px solid var(--border); overflow: hidden;
+      box-shadow: var(--shadow-sm);
       transition: box-shadow .25s, transform .25s;
     }
-    .about-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
-    .about-card .icon { font-size: 2.4rem; margin-bottom: 1rem; }
-    .about-card h3 { color: var(--green-dark); font-size: 1.15rem; margin-bottom: .6rem; }
-    .about-card p { color: var(--muted); font-size: .95rem; }
+    .feat-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+    .feat-card-top {
+      background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+      padding: 1.4rem 1.6rem 1rem;
+    }
+    .feat-tag {
+      font-size: .68rem; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--gold-light);
+      background: rgba(200,168,75,.2); padding: .2rem .7rem; border-radius: 2rem;
+      margin-bottom: .6rem; display: inline-block; font-family: 'Inter', sans-serif;
+    }
+    .feat-card-top h3 { color: #fff; font-size: 1.15rem; }
+    .feat-card-body { padding: 1.2rem 1.6rem 1.4rem; }
+    .feat-card-body p { font-size: .87rem; color: var(--muted); line-height: 1.6; }
+    .feat-footer { display: flex; justify-content: flex-end; padding: 0 1.6rem 1.4rem; }
+    .feat-footer a { font-size: .82rem; font-weight: 700; color: var(--green-mid); text-decoration: none; }
+    .feat-footer a:hover { color: var(--green-dark); }
 
-    /* ══════════════════════════════════════════
-       STATS BAR
-    ══════════════════════════════════════════ */
-    .stats {
-      background: var(--green-dark);
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 0;
-      text-align: center;
+    /* ── INSIGHTS TEASER ── */
+    .insights-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem; max-width: var(--max-w); margin-inline: auto;
     }
-    .stat-item {
-      padding: 3rem 1.5rem;
-      border-right: 1px solid rgba(255,255,255,.08);
-      position: relative;
-    }
-    .stat-item:last-child { border-right: none; }
-    .stat-item .number {
-      font-family: 'Fraunces', serif;
-      font-size: clamp(2.2rem, 4vw, 3.4rem);
-      font-weight: 900; color: var(--gold);
-      display: block; line-height: 1;
-      margin-bottom: .4rem;
-    }
-    .stat-item .label { font-size: .85rem; color: #a5d6a7; letter-spacing: .5px; font-weight: 500; }
-
-    /* ══════════════════════════════════════════
-       SERVICES
-    ══════════════════════════════════════════ */
-    #services { background: #fff; }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 1.5rem; max-width: 1100px; margin-inline: auto;
-    }
-    .service-card {
-      background: var(--cream); border-radius: var(--radius);
-      padding: 2rem 1.6rem; text-align: center;
-      border: 1px solid var(--border);
-      transition: box-shadow .25s, transform .25s, border-color .25s;
-    }
-    .service-card:hover {
-      box-shadow: 0 10px 32px rgba(45,122,53,.15);
-      transform: translateY(-5px);
-      border-color: var(--green-light);
-    }
-    .service-card .icon { font-size: 2.6rem; margin-bottom: 1rem; }
-    .service-card h3 { color: var(--green-dark); font-size: 1.05rem; margin-bottom: .5rem; }
-    .service-card p { color: var(--muted); font-size: .88rem; line-height: 1.6; }
-
-    /* ══════════════════════════════════════════
-       PRODUCTS
-    ══════════════════════════════════════════ */
-    #products { background: var(--cream); }
-    .products-intro {
-      max-width: 680px; margin-inline: auto;
-      text-align: center; margin-bottom: 3.5rem;
-    }
-    .products-intro p { color: var(--muted); }
-
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem; max-width: 1100px; margin-inline: auto;
-    }
-    .product-card {
-      background: #fff;
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
+    .insight-card {
+      border-radius: var(--radius); overflow: hidden;
       border: 1px solid var(--border);
       display: flex; flex-direction: column;
       transition: box-shadow .25s, transform .25s;
     }
-    .product-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
-
-    .product-card-header {
-      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 100%);
-      padding: 1.6rem 1.8rem 1.2rem;
-      position: relative; overflow: hidden;
+    .insight-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+    .insight-card-thumb {
+      height: 8px;
+      background: linear-gradient(to right, var(--green-dark), var(--green-light));
     }
-    .product-card-header::after {
-      content: '';
-      position: absolute; top: -20px; right: -20px;
-      width: 90px; height: 90px;
-      background: rgba(255,255,255,.05);
-      border-radius: 50%;
-    }
-    .product-tag {
-      display: inline-block;
-      background: rgba(200,168,75,.25);
-      color: var(--gold-light);
+    .insight-card-body { padding: 1.5rem; flex: 1; }
+    .insight-label {
       font-size: .7rem; font-weight: 700; letter-spacing: 1.5px;
-      text-transform: uppercase; padding: .25rem .8rem;
-      border-radius: 2rem; margin-bottom: .7rem;
-      font-family: 'Inter', sans-serif;
+      text-transform: uppercase; color: var(--green-mid); margin-bottom: .6rem;
+      display: block; font-family: 'Inter', sans-serif;
     }
-    .product-card-header h3 {
-      color: #fff; font-size: 1.25rem; font-weight: 700;
-      line-height: 1.2; font-family: 'Fraunces', serif;
-    }
+    .insight-card-body h3 { font-size: 1.05rem; color: var(--green-dark); margin-bottom: .5rem; }
+    .insight-card-body p { font-size: .87rem; color: var(--muted); line-height: 1.6; }
+    .insight-card-foot { padding: 0 1.5rem 1.4rem; }
+    .insight-card-foot a { font-size: .82rem; font-weight: 700; color: var(--green-mid); text-decoration: none; }
+    .insight-card-foot a:hover { color: var(--green-dark); }
 
-    .product-card-body {
-      padding: 1.5rem 1.8rem;
-      flex: 1; display: flex; flex-direction: column;
-    }
-    .product-card-body p {
-      color: var(--muted); font-size: .92rem;
-      line-height: 1.65; flex: 1;
-    }
-    .product-use {
-      margin-top: 1.2rem;
-      display: flex; align-items: flex-start; gap: .5rem;
-    }
-    .product-use-label {
-      font-size: .75rem; font-weight: 700; letter-spacing: .5px;
-      color: var(--green-mid); text-transform: uppercase;
-      white-space: nowrap; padding-top: .1rem;
-      font-family: 'Inter', sans-serif;
-    }
-    .product-use p { color: #3a3a3a; font-size: .85rem; margin: 0; }
-
-    /* ══════════════════════════════════════════
-       TEAM
-    ══════════════════════════════════════════ */
-    #team { background: #fff; }
-    .team-layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem; max-width: 1050px; margin-inline: auto;
-      align-items: center;
-    }
-    .team-text h2 {
-      font-family: 'Fraunces', serif;
-      font-size: clamp(1.7rem, 3vw, 2.4rem);
-      color: var(--green-dark); font-weight: 900;
-      line-height: 1.15; margin-bottom: 1rem;
-    }
-    .team-text p { color: var(--muted); margin-bottom: 1.2rem; font-size: .97rem; }
-    .team-pillars {
-      display: flex; flex-direction: column; gap: .9rem;
-      margin-top: 1.5rem;
-    }
-    .team-pillar {
-      display: flex; align-items: flex-start; gap: 1rem;
-      padding: 1rem 1.2rem;
-      background: var(--cream); border-radius: 10px;
-      border-left: 3px solid var(--green-light);
-    }
-    .team-pillar .icon { font-size: 1.5rem; flex-shrink: 0; }
-    .team-pillar h4 { font-size: .95rem; color: var(--green-dark); margin-bottom: .2rem; }
-    .team-pillar p { color: var(--muted); font-size: .85rem; margin: 0; }
-
-    .team-credentials {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
-    }
-    .cred-card {
-      background: var(--cream); border-radius: 12px;
-      padding: 1.5rem; text-align: center;
-      border: 1px solid var(--border);
-    }
-    .cred-card .big { font-family: 'Fraunces', serif; font-size: 2.2rem; font-weight: 900; color: var(--green-mid); display: block; }
-    .cred-card span:last-child { font-size: .82rem; color: var(--muted); font-weight: 500; }
-
-    /* ══════════════════════════════════════════
-       TESTIMONIALS
-    ══════════════════════════════════════════ */
-    #testimonials { background: var(--green-dark); }
-    #testimonials .section-title h2 { color: #fff; }
-    #testimonials .section-title p { color: #a5d6a7; }
-    #testimonials .accent-line { background: linear-gradient(to right, var(--gold), var(--gold-light)); }
-
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem; max-width: 1050px; margin-inline: auto;
-    }
-    .testimonial-card {
-      background: rgba(255,255,255,.07);
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: var(--radius);
-      padding: 2rem;
-      transition: background .25s;
-    }
-    .testimonial-card:hover { background: rgba(255,255,255,.11); }
-    .testimonial-stars { color: var(--gold); font-size: 1rem; margin-bottom: 1rem; letter-spacing: 2px; }
-    .testimonial-quote {
-      color: #d8eed8; font-size: .97rem; line-height: 1.7;
-      margin-bottom: 1.5rem; font-style: italic;
-    }
-    .testimonial-quote::before { content: '\201C'; }
-    .testimonial-quote::after  { content: '\201D'; }
-    .testimonial-author { display: flex; align-items: center; gap: .9rem; }
-    .testimonial-avatar {
-      width: 44px; height: 44px; border-radius: 50%;
-      background: var(--green-mid);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.2rem; font-weight: 700; color: #fff;
-      flex-shrink: 0;
-      font-family: 'Fraunces', serif;
-    }
-    .testimonial-name { color: #fff; font-weight: 600; font-size: .9rem; }
-    .testimonial-role { color: #88c488; font-size: .8rem; }
-
-    /* ══════════════════════════════════════════
-       CONTACT
-    ══════════════════════════════════════════ */
-    #contact { background: var(--cream); }
-    .contact-layout {
-      display: grid;
-      grid-template-columns: 1fr 1.4fr;
-      gap: 3.5rem; max-width: 1050px; margin-inline: auto;
-      align-items: start;
-    }
-    .contact-info h3 {
-      font-family: 'Fraunces', serif;
-      font-size: 1.5rem; color: var(--green-dark); margin-bottom: 1rem;
-    }
-    .contact-info p { color: var(--muted); margin-bottom: 1.8rem; font-size: .95rem; }
-    .contact-row { display: flex; align-items: center; gap: .9rem; margin-bottom: 1rem; }
-    .contact-row .ci {
-      width: 40px; height: 40px; border-radius: 10px;
-      background: var(--green-pale); color: var(--green-mid);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.15rem; flex-shrink: 0;
-    }
-    .contact-row a { color: var(--green-mid); font-weight: 600; text-decoration: none; font-size: .95rem; }
-    .contact-row a:hover { text-decoration: underline; }
-    .contact-row span.txt { color: var(--text); font-size: .95rem; }
-
-    /* contact form */
-    .contact-form-wrap {
-      background: #fff; border-radius: var(--radius);
-      padding: 2.5rem; box-shadow: var(--shadow-md);
-    }
-    .contact-form-wrap h3 {
-      font-family: 'Fraunces', serif;
-      color: var(--green-dark); font-size: 1.35rem; margin-bottom: 1.5rem;
-    }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .form-group { display: flex; flex-direction: column; gap: .4rem; margin-bottom: 1.1rem; }
-    .form-group label { font-size: .82rem; font-weight: 600; color: var(--green-dark); letter-spacing: .3px; }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      font-family: 'Inter', sans-serif;
-      font-size: .92rem; color: var(--text);
-      border: 1.5px solid var(--border);
-      border-radius: 8px;
-      padding: .7rem 1rem;
-      background: #fff;
-      transition: border-color .2s, box-shadow .2s;
-      outline: none;
-      width: 100%;
-    }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: var(--green-mid);
-      box-shadow: 0 0 0 3px rgba(45,122,53,.12);
-    }
-    .form-group textarea { resize: vertical; min-height: 110px; }
-    .form-submit {
-      width: 100%;
-      background: var(--green-dark); color: #fff;
-      font-size: 1rem; font-weight: 700;
-      padding: .95rem; border-radius: 2rem;
-      border: none; cursor: pointer;
-      transition: background .2s, transform .15s;
-      font-family: 'Inter', sans-serif;
-    }
-    .form-submit:hover { background: var(--green-mid); transform: translateY(-1px); }
-    .form-note { font-size: .75rem; color: var(--muted); text-align: center; margin-top: .8rem; }
-
-    /* ══════════════════════════════════════════
-       FOOTER
-    ══════════════════════════════════════════ */
-    footer {
-      background: #0e1f10; color: #5a7a5a;
-      padding: 3rem 6vw 2rem;
-    }
-    .footer-inner {
-      max-width: 1100px; margin-inline: auto;
-      display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 3rem;
-      padding-bottom: 2rem;
-      border-bottom: 1px solid rgba(255,255,255,.06);
-    }
-    .footer-brand .logo {
-      font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 900;
-      color: var(--gold); letter-spacing: 2px; margin-bottom: .7rem;
-    }
-    .footer-brand p { font-size: .85rem; line-height: 1.7; max-width: 280px; }
-    .footer-col h4 {
-      font-family: 'Fraunces', serif;
-      color: #a0b8a0; font-size: .9rem; font-weight: 700;
-      letter-spacing: .5px; margin-bottom: 1rem;
-    }
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: .5rem; }
-    .footer-col ul a { font-size: .85rem; text-decoration: none; transition: color .2s; }
-    .footer-col ul a:hover { color: var(--gold); }
-    .footer-bottom {
-      max-width: 1100px; margin-inline: auto;
-      display: flex; justify-content: space-between; align-items: center;
-      padding-top: 1.5rem; font-size: .8rem; flex-wrap: wrap; gap: .5rem;
-    }
-    .footer-bottom span { color: var(--gold); }
-
-    /* ══════════════════════════════════════════
-       RESPONSIVE
-    ══════════════════════════════════════════ */
-    @media (max-width: 900px) {
-      .team-layout { grid-template-columns: 1fr; gap: 3rem; }
-      .contact-layout { grid-template-columns: 1fr; }
-      .footer-inner { grid-template-columns: 1fr 1fr; }
-    }
-
-    @media (max-width: 680px) {
-      nav { padding: 0 5vw; }
-      .nav-links { display: none; flex-direction: column; gap: 0; position: absolute; top: 68px; left: 0; right: 0; background: rgba(26,74,31,.98); padding: 1rem 0; }
-      .nav-links.open { display: flex; }
-      .nav-links li a { display: block; padding: .85rem 6vw; border-bottom: 1px solid rgba(255,255,255,.06); }
-      .nav-toggle { display: flex; }
-      .hero { min-height: 88vh; padding: 5rem 5vw 3rem; }
+    @media (max-width: 760px) {
+      .about-teaser { grid-template-columns: 1fr; gap: 2.5rem; }
       .hero-scroll { display: none; }
-      section { padding: 4rem 5vw; }
-      .form-row { grid-template-columns: 1fr; }
-      .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
-      .footer-bottom { flex-direction: column; text-align: center; }
-      .team-credentials { grid-template-columns: 1fr 1fr; }
-      .stat-item { padding: 2rem 1rem; }
-    }
-
-    @media (max-width: 400px) {
-      .hero h1 { font-size: 2.2rem; }
-      .hero-actions { flex-direction: column; align-items: center; }
-      .team-credentials { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ══ NAV ══ -->
-  <nav>
-    <a class="nav-logo" href="#">DAMAK<sup>®</sup></a>
+<!-- ══ NAV ══ -->
+<nav>
+  <a class="nav-logo" href="index.html">DAMAK<sup>®</sup></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="sustainability.html">Sustainability</a></li>
+    <li><a href="insights.html">Insights</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="lang-toggle" aria-label="Switch language">EN | عر</button>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#about">About</a></li>
-      <li><a href="#products">Products</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#team">Our Team</a></li>
-      <li><a href="#contact" class="nav-cta">Contact Us</a></li>
-    </ul>
-  </nav>
+  </div>
+</nav>
 
-  <!-- ══ HERO ══ -->
-  <section class="hero">
-    <div class="hero-pattern">
-      <svg width="400" height="400" style="top:-100px;right:-80px;" viewBox="0 0 400 400">
-        <circle cx="200" cy="200" r="180" stroke="white" stroke-width="1" fill="none"/>
-        <circle cx="200" cy="200" r="120" stroke="white" stroke-width="1" fill="none"/>
-        <circle cx="200" cy="200" r="60"  stroke="white" stroke-width="1" fill="none"/>
-      </svg>
-      <svg width="300" height="300" style="bottom:80px;left:-60px;" viewBox="0 0 300 300">
-        <path d="M150 280 C150 280 40 200 40 120 C40 60 90 20 150 40 C210 20 260 60 260 120 C260 200 150 280 150 280Z" stroke="white" stroke-width="1" fill="none"/>
-      </svg>
-    </div>
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-pattern">
+    <svg width="500" height="500" style="top:-120px;right:-100px;" viewBox="0 0 500 500">
+      <circle cx="250" cy="250" r="220" stroke="white" stroke-width="1" fill="none"/>
+      <circle cx="250" cy="250" r="150" stroke="white" stroke-width="1" fill="none"/>
+      <circle cx="250" cy="250" r="80"  stroke="white" stroke-width="1" fill="none"/>
+    </svg>
+    <svg width="320" height="320" style="bottom:100px;left:-60px;" viewBox="0 0 320 320">
+      <path d="M160 300C160 300 40 210 40 120C40 55 95 15 160 40C225 15 280 55 280 120C280 210 160 300 160 300Z" stroke="white" stroke-width="1" fill="none"/>
+    </svg>
+  </div>
+  <div class="hero-badge">Egypt's Agricultural Partner Since 2011</div>
+  <h1>Growing a <em>Sustainable</em><br/>Future for Egypt</h1>
+  <p>DAMAK provides advanced plant growth solutions and end-to-end agronomic services — empowering Egypt's farmers with the science and support to thrive.</p>
+  <div class="hero-actions">
+    <a href="products.html" class="btn btn-primary">Explore Our Products</a>
+    <a href="contact.html" class="btn btn-outline">Talk to an Agronomist</a>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
 
-    <div class="hero-badge">Egypt's Agricultural Partner Since 2010</div>
-    <h1>Growing a <em>Sustainable</em><br/>Future for Egypt</h1>
-    <p>DAMAK provides advanced plant growth solutions and end-to-end agronomic services — empowering Egypt's farmers with the science and support to thrive.</p>
-    <div class="hero-actions">
-      <a href="#products" class="btn btn-primary">Our Products ↓</a>
-      <a href="#contact" class="btn btn-outline">Talk to an Agronomist</a>
-    </div>
-    <div class="hero-scroll">Scroll</div>
-  </section>
+<!-- ══ STATS ══ -->
+<div class="stats-bar">
+  <div class="stat-item reveal d1">
+    <span class="stat-num count-up" data-target="50000" data-suffix="+">50,000+</span>
+    <span class="stat-label">Feddans Developed</span>
+  </div>
+  <div class="stat-item reveal d2">
+    <span class="stat-num count-up" data-target="8">8</span>
+    <span class="stat-label">Products in Portfolio</span>
+  </div>
+  <div class="stat-item reveal d3">
+    <span class="stat-num count-up" data-target="3000" data-suffix="+">3,000+</span>
+    <span class="stat-label">Farmers Supported</span>
+  </div>
+  <div class="stat-item reveal d4">
+    <span class="stat-num count-up" data-target="15" data-suffix="+">15+</span>
+    <span class="stat-label">Years of Experience</span>
+  </div>
+</div>
 
-  <!-- ══ ABOUT ══ -->
-  <section class="about" id="about">
-    <div class="section-title reveal">
-      <h2>Who We Are</h2>
-      <div class="accent-line"></div>
-      <p>A mission-driven agricultural development company rooted in Egypt's soil — and its future.</p>
-    </div>
-    <div class="about-grid">
-      <div class="about-card reveal reveal-delay-1">
-        <div class="icon">🌱</div>
-        <h3>Our Mission</h3>
-        <p>To equip Egyptian farmers with cutting-edge plant growth technologies and the agronomic knowledge to apply them — increasing yields, reducing inputs, and building resilient farms.</p>
+<!-- ══ WHO WE ARE TEASER ══ -->
+<section class="section section-white">
+  <div class="about-teaser">
+    <div class="about-teaser-text reveal-left">
+      <h2>A Technical Partner,<br/>Not Just a Supplier</h2>
+      <p>Since 2011, DAMAK has worked alongside Egyptian farmers — not just selling products, but providing the agronomic expertise to use them correctly. Our team of agricultural engineers is active in the field every season.</p>
+      <p>We develop, import, and distribute a portfolio of plant growth regulators and biostimulants that are formulated for Egypt's unique climate, soil profile, and crop calendar.</p>
+      <div class="about-pillars">
+        <div class="about-pill"><span class="ico">🔬</span><p>Field agronomists active across 8 governorates</p></div>
+        <div class="about-pill"><span class="ico">🌾</span><p>Products optimised for Egyptian growing conditions</p></div>
+        <div class="about-pill"><span class="ico">📞</span><p>Technical support throughout the entire growing season</p></div>
       </div>
-      <div class="about-card reveal reveal-delay-2">
-        <div class="icon">🌍</div>
-        <h3>Our Vision</h3>
-        <p>A self-sufficient agricultural Egypt where science, tradition, and sustainability unite to guarantee food security for generations to come.</p>
-      </div>
-      <div class="about-card reveal reveal-delay-3">
-        <div class="icon">🤝</div>
-        <h3>Our Values</h3>
-        <p>Farmer-first partnership, scientific integrity, environmental responsibility, and deep respect for the land and the people who work it every day.</p>
-      </div>
+      <br/>
+      <a href="about.html" class="btn btn-outline-dark btn-sm">Our Full Story →</a>
     </div>
-  </section>
-
-  <!-- ══ STATS ══ -->
-  <div class="stats">
-    <div class="stat-item reveal reveal-delay-1">
-      <span class="number">50,000+</span>
-      <span class="label">Feddans Developed</span>
-    </div>
-    <div class="stat-item reveal reveal-delay-2">
-      <span class="number">8</span>
-      <span class="label">Products in Portfolio</span>
-    </div>
-    <div class="stat-item reveal reveal-delay-3">
-      <span class="number">3,000+</span>
-      <span class="label">Farmers Supported</span>
-    </div>
-    <div class="stat-item reveal reveal-delay-4">
-      <span class="number">15+</span>
-      <span class="label">Years of Experience</span>
+    <div class="about-visual reveal-right">
+      <blockquote>
+        "The goal has always been the same: give Egyptian farmers access to the same quality of agronomic science that global producers take for granted."
+        <cite>— DAMAK Agricultural Development</cite>
+      </blockquote>
     </div>
   </div>
+</section>
 
-  <!-- ══ PRODUCTS ══ -->
-  <section id="products">
-    <div class="section-title reveal">
-      <h2>Our Product Line</h2>
-      <div class="accent-line"></div>
-      <p>A complete portfolio of plant growth regulators, biostimulants, and crop-protection formulations — developed for Egypt's climate and crop profile.</p>
-    </div>
-
-    <div class="products-grid">
-
-      <!-- Power Contanol -->
-      <div class="product-card reveal reveal-delay-1">
-        <div class="product-card-header">
-          <div class="product-tag">Growth Regulator</div>
-          <h3>Power Contanol</h3>
-        </div>
-        <div class="product-card-body">
-          <p>A broad-spectrum plant growth regulator that optimises hormonal balance during critical vegetative and reproductive stages. Power Contanol improves cell elongation, strengthens stem structure, and helps crops recover vigour after abiotic stress events such as heat or drought.</p>
-          <div class="product-use">
-            <span class="product-use-label">Best for:</span>
-            <p>Vegetative establishment, post-stress recovery; suitable for cereals, vegetables, and fruit trees.</p>
-          </div>
-        </div>
+<!-- ══ FEATURED PRODUCTS ══ -->
+<section class="section section-cream">
+  <div class="section-title reveal">
+    <h2>Our Product Portfolio</h2>
+    <div class="accent-line"></div>
+    <p>Eight specialised plant growth regulators and biostimulants — each addressing a distinct crop need across the growth cycle.</p>
+  </div>
+  <div class="feat-products">
+    <div class="feat-grid">
+      <div class="feat-card reveal d1">
+        <div class="feat-card-top"><div class="feat-tag">Growth Regulator</div><h3>Power Contanol</h3></div>
+        <div class="feat-card-body"><p>Optimises hormonal balance during critical vegetative and reproductive stages, strengthening stem structure and supporting recovery after abiotic stress.</p></div>
+        <div class="feat-footer"><a href="products.html#power-contanol">Learn more →</a></div>
       </div>
-
-      <!-- Macovit DRW -->
-      <div class="product-card reveal reveal-delay-2">
-        <div class="product-card-header">
-          <div class="product-tag">Biostimulant</div>
-          <h3>Macovit DRW</h3>
-        </div>
-        <div class="product-card-body">
-          <p>A water-soluble micronutrient and amino-acid complex that enhances nutrient uptake efficiency through the leaf and root. Macovit DRW supports rapid green-up, improves chlorophyll density, and primes crops for peak photosynthetic activity.</p>
-          <div class="product-use">
-            <span class="product-use-label">Best for:</span>
-            <p>Foliar application at tillering or branching; ideal for leafy vegetables, cotton, and legumes.</p>
-          </div>
-        </div>
+      <div class="feat-card reveal d2">
+        <div class="feat-card-top"><div class="feat-tag">Biostimulant</div><h3>Macovit DRW</h3></div>
+        <div class="feat-card-body"><p>A water-soluble micronutrient and amino-acid complex that enhances foliar nutrient uptake and primes crops for peak photosynthetic output.</p></div>
+        <div class="feat-footer"><a href="products.html#macovit-drw">Learn more →</a></div>
       </div>
-
-      <!-- Brace Br -->
-      <div class="product-card reveal reveal-delay-3">
-        <div class="product-card-header">
-          <div class="product-tag">Structural Support</div>
-          <h3>Brace Br</h3>
-        </div>
-        <div class="product-card-body">
-          <p>Formulated to reinforce cell-wall integrity and reduce lodging risk in tall-season crops. Brace Br promotes compact, sturdy stem architecture by moderating internodal elongation without suppressing overall canopy development.</p>
-          <div class="product-use">
-            <span class="product-use-label">Best for:</span>
-            <p>Pre-heading application in wheat, maize, and sorghum; useful in high-wind or high-nitrogen field conditions.</p>
-          </div>
-        </div>
+      <div class="feat-card reveal d3">
+        <div class="feat-card-top"><div class="feat-tag">Flowering Enhancer</div><h3>Sinolide One</h3></div>
+        <div class="feat-card-body"><p>Synchronises and intensifies flowering initiation, improving pollen viability and reducing flower drop caused by temperature fluctuations.</p></div>
+        <div class="feat-footer"><a href="products.html#sinolide-one">Learn more →</a></div>
       </div>
-
-      <!-- Sinolide One -->
-      <div class="product-card reveal reveal-delay-1">
-        <div class="product-card-header">
-          <div class="product-tag">Flowering Enhancer</div>
-          <h3>Sinolide One</h3>
-        </div>
-        <div class="product-card-body">
-          <p>A targeted plant growth regulator that synchronises and intensifies flowering initiation. Sinolide One improves pollen viability, increases fruit-set rates, and reduces flower drop caused by temperature fluctuations or nutrient imbalances.</p>
-          <div class="product-use">
-            <span class="product-use-label">Best for:</span>
-            <p>Pre-bloom and full-bloom stages in tomatoes, cucumbers, pepper, and stone fruits.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Trimax -->
-      <div class="product-card reveal reveal-delay-2">
-        <div class="product-card-header">
-          <div class="product-tag">Multi-Action PGR</div>
-          <h3>Trimax</h3>
-        </div>
-        <div class="product-card-body">
-          <p>A triple-mode plant growth regulator combining auxin-type, cytokinin-type, and gibberellin-type activity in one balanced formulation. Trimax drives uniform cell division, lateral root development, and early fruit sizing — giving crops a competitive head-start from germination onward.</p>
-          <div class="product-use">
-            <span class="product-use-label">Best for:</span>
-            <p>Early-season root establishment and fruit sizing; effective across a wide range of field and horticultural crops.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Limitora -->
-      <div class="product-card reveal reveal-delay-3">
-        <div class="product-card-header">
-          <div class="product-tag">Growth Controller</div>
-          <h3>Limitora</h3>
-        </div>
-        <div class="product-card-body">
-          <p>A precision growth-control agent that curbs excessive vegetative growth, redirecting the plant's metabolic energy toward reproductive organs. Limitora improves canopy light penetration, reduces pest and disease pressure in dense plantings, and enhances the marketable yield-to-biomass ratio.</p>
-          <div class="product-use">
-            <span class="product-use-label">Best for:</span>
-            <p>Managing over-vigorous canopy in grapes, citrus, and high-density vegetable tunnels.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Extra Indole -->
-      <div class="product-card reveal reveal-delay-1">
-        <div class="product-card-header">
-          <div class="product-tag">Root Stimulant</div>
-          <h3>Extra Indole</h3>
-        </div>
-        <div class="product-card-body">
-          <p>An indole-based root-promoting formulation that stimulates the development of a dense, extensive lateral root system. Extra Indole accelerates transplant establishment, improves water and mineral absorption, and reduces transplant shock in seedlings and cuttings.</p>
-          <div class="product-use">
-            <span class="product-use-label">Best for:</span>
-            <p>Transplanting and propagation; highly effective for strawberries, nursery stock, and root vegetables.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Damak Indole -->
-      <div class="product-card reveal reveal-delay-2">
-        <div class="product-card-header">
-          <div class="product-tag">Premium Root PGR</div>
-          <h3>Damak Indole</h3>
-        </div>
-        <div class="product-card-body">
-          <p>DAMAK's flagship indole-acetic-acid formulation, optimised for Egyptian soil conditions and water salinity levels. Damak Indole promotes deep, robust rooting, increases resistance to soil-borne stress, and supports long-season perennial crops through sustained auxin activity.</p>
-          <div class="product-use">
-            <span class="product-use-label">Best for:</span>
-            <p>Perennial fruit trees, long-season crops, and saline or sandy soils where root anchoring is critical.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ══ SERVICES ══ -->
-  <section id="services" style="background:var(--cream)">
-    <div class="section-title reveal">
-      <h2>End-to-End Agricultural Services</h2>
-      <div class="accent-line"></div>
-      <p>From land preparation to market — we support every stage of the farming cycle.</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card reveal reveal-delay-1">
-        <div class="icon">🏗️</div>
-        <h3>Land Reclamation</h3>
-        <p>Transforming desert and degraded land into arable, high-yield agricultural zones through scientific soil preparation.</p>
-      </div>
-      <div class="service-card reveal reveal-delay-2">
-        <div class="icon">💧</div>
-        <h3>Irrigation Systems</h3>
-        <p>Designing and installing modern drip and sprinkler irrigation for maximum water efficiency in Egypt's dry climate.</p>
-      </div>
-      <div class="service-card reveal reveal-delay-3">
-        <div class="icon">🌾</div>
-        <h3>Crop Management</h3>
-        <p>Expert guidance on crop selection, rotation, soil health, and integrated PGR programmes to maximise yields.</p>
-      </div>
-      <div class="service-card reveal reveal-delay-1">
-        <div class="icon">📊</div>
-        <h3>Agronomic Consulting</h3>
-        <p>Data-driven feasibility studies, soil analysis interpretation, and strategic planning for long-term farm profitability.</p>
-      </div>
-      <div class="service-card reveal reveal-delay-2">
-        <div class="icon">🚜</div>
-        <h3>Mechanisation</h3>
-        <p>Supplying and operating modern farm machinery to reduce labour costs, improve precision, and increase throughput.</p>
-      </div>
-      <div class="service-card reveal reveal-delay-3">
-        <div class="icon">📦</div>
-        <h3>Post-Harvest & Export</h3>
-        <p>Packaging, cold-chain storage, and export logistics to connect Egyptian farmers with regional and global markets.</p>
+      <div class="feat-card reveal d4">
+        <div class="feat-card-top"><div class="feat-tag">Premium Root PGR</div><h3>Damak Indole</h3></div>
+        <div class="feat-card-body"><p>DAMAK's flagship auxin formulation — optimised for Egyptian soil conditions and water salinity, supporting deep rooting in long-season perennial crops.</p></div>
+        <div class="feat-footer"><a href="products.html#damak-indole">Learn more →</a></div>
       </div>
     </div>
-  </section>
-
-  <!-- ══ TEAM ══ -->
-  <section id="team">
-    <div class="team-layout">
-      <div class="team-text reveal-left">
-        <h2>Science Behind<br/>Every Season</h2>
-        <p>DAMAK is more than a product supplier. Our in-house team of agricultural engineers and agronomists works directly with farmers in the field — from soil sampling before planting to post-harvest evaluation.</p>
-        <p>We believe the best agronomic results come from combining advanced inputs with accurate, on-the-ground technical guidance tailored to each farm's specific conditions.</p>
-        <div class="team-pillars">
-          <div class="team-pillar">
-            <span class="icon">🔬</span>
-            <div>
-              <h4>Field Agronomists</h4>
-              <p>On-site crop scouting, growth-stage assessments, and tailored PGR application timing.</p>
-            </div>
-          </div>
-          <div class="team-pillar">
-            <span class="icon">🧪</span>
-            <div>
-              <h4>Soil & Tissue Analysis</h4>
-              <p>Laboratory-backed recommendations to identify deficiencies before they affect yield.</p>
-            </div>
-          </div>
-          <div class="team-pillar">
-            <span class="icon">📞</span>
-            <div>
-              <h4>Technical Support Hotline</h4>
-              <p>Direct access to DAMAK agronomists throughout the growing season — in Arabic and English.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="team-credentials reveal-right">
-        <div class="cred-card reveal reveal-delay-1">
-          <span class="big">15+</span>
-          <span>Years in Egyptian Agriculture</span>
-        </div>
-        <div class="cred-card reveal reveal-delay-2">
-          <span class="big">8</span>
-          <span>Governorates Served</span>
-        </div>
-        <div class="cred-card reveal reveal-delay-3">
-          <span class="big">12+</span>
-          <span>Qualified Agronomists</span>
-        </div>
-        <div class="cred-card reveal reveal-delay-4">
-          <span class="big">30+</span>
-          <span>Crop Types Supported</span>
-        </div>
-      </div>
+    <div style="text-align:center">
+      <a href="products.html" class="btn btn-secondary">View All 8 Products →</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ══ TESTIMONIALS ══ -->
-  <!-- PLACEHOLDER CONTENT — replace these quotes with real farmer/distributor testimonials before launch -->
-  <section id="testimonials">
-    <div class="section-title reveal">
-      <h2>Trusted by Egypt's Farmers</h2>
-      <div class="accent-line"></div>
-      <p>What farmers and distribution partners say about working with DAMAK.</p>
+<!-- ══ PARTNER LOGO STRIP ══ -->
+<!-- PLACEHOLDER — replace placeholder boxes with real distributor/partner/certification logos
+     once permission to use them is confirmed with the relevant organisations. -->
+<div class="partner-strip reveal">
+  <p>Distribution & Supply Partners</p>
+  <div class="partner-logos">
+    <div class="partner-logo-box">[Partner Logo]</div>
+    <div class="partner-logo-box">[Partner Logo]</div>
+    <div class="partner-logo-box">[Partner Logo]</div>
+    <div class="partner-logo-box">[Partner Logo]</div>
+    <div class="partner-logo-box">[Partner Logo]</div>
+  </div>
+</div>
+
+<!-- ══ INSIGHTS TEASER ══ -->
+<section class="section section-white">
+  <div class="section-title reveal">
+    <h2>Agricultural Insights</h2>
+    <div class="accent-line"></div>
+    <p>Practical agronomic knowledge from the DAMAK field team — written for Egyptian growing conditions.</p>
+  </div>
+  <div class="insights-grid">
+    <div class="insight-card reveal d1">
+      <div class="insight-card-thumb"></div>
+      <div class="insight-card-body">
+        <span class="insight-label">Soil Management</span>
+        <h3>Preparing Your Soil Before the Spring Growth Phase</h3>
+        <p>Soil structure, drainage, and organic matter levels at planting time set the ceiling for everything else. Here's what to assess — and correct — before your spring crops go in.</p>
+      </div>
+      <div class="insight-card-foot"><a href="insights.html">Read more →</a></div>
     </div>
-    <div class="testimonials-grid">
-
-      <div class="testimonial-card reveal reveal-delay-1">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-quote">We switched to Damak Indole for our citrus rootstocks last season and saw measurable improvement in root density and early canopy development. The DAMAK agronomist visited twice to calibrate the programme — that kind of support is rare from a supplier.</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">A</div>
-          <div>
-            <div class="testimonial-name">Ahmed R. — [PLACEHOLDER]</div>
-            <div class="testimonial-role">Citrus Farmer, Minya Governorate</div>
-          </div>
-        </div>
+    <div class="insight-card reveal d2">
+      <div class="insight-card-thumb"></div>
+      <div class="insight-card-body">
+        <span class="insight-label">Plant Science</span>
+        <h3>Understanding Plant Growth Regulators: A Farmer's Guide</h3>
+        <p>PGRs are among the most powerful tools available to modern growers — but only when applied at the right growth stage, in the right concentration. We explain the basics.</p>
       </div>
-
-      <div class="testimonial-card reveal reveal-delay-2">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-quote">Sinolide One transformed our tomato flower-set rate this season. Fruit drop used to be our biggest problem in the June heat — after two applications at pre-bloom, the difference was visible within two weeks. Very satisfied with DAMAK's technical team.</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">M</div>
-          <div>
-            <div class="testimonial-name">Mohamed S. — [PLACEHOLDER]</div>
-            <div class="testimonial-role">Protected Cultivation Farmer, Fayoum</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card reveal reveal-delay-3">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-quote">As a distributor serving 200+ small farms in our region, we need products that actually work in the field and a supplier who stands behind them. DAMAK's training support and rapid technical response make them our first-choice agrochemical partner.</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">K</div>
-          <div>
-            <div class="testimonial-name">Khalid F. — [PLACEHOLDER]</div>
-            <div class="testimonial-role">Agricultural Distributor, Beheira</div>
-          </div>
-        </div>
-      </div>
-
+      <div class="insight-card-foot"><a href="insights.html">Read more →</a></div>
     </div>
-  </section>
-  <!-- END PLACEHOLDER TESTIMONIALS -->
-
-  <!-- ══ CONTACT ══ -->
-  <section id="contact">
-    <div class="section-title reveal">
-      <h2>Get in Touch</h2>
-      <div class="accent-line"></div>
-      <p>Talk to an agronomist, request a product sample, or explore a distribution partnership.</p>
+    <div class="insight-card reveal d3">
+      <div class="insight-card-thumb"></div>
+      <div class="insight-card-body">
+        <span class="insight-label">Crop Nutrition</span>
+        <h3>Choosing the Right Fertilizer Programme for Your Crop</h3>
+        <p>There's no universal fertilizer schedule. Crop type, growth stage, soil baseline, and water quality all determine what your plants actually need. We break it down.</p>
+      </div>
+      <div class="insight-card-foot"><a href="insights.html">Read more →</a></div>
     </div>
-    <div class="contact-layout">
+  </div>
+  <div style="text-align:center; margin-top:2.5rem">
+    <a href="insights.html" class="btn btn-outline-dark btn-sm">All Insights →</a>
+  </div>
+</section>
 
-      <div class="contact-info reveal-left">
-        <h3>We're Here to Help</h3>
-        <p>Whether you're a farmer looking for the right PGR programme or a distributor interested in carrying the DAMAK line — our team responds within one business day.</p>
-        <div class="contact-row">
-          <span class="ci">📧</span>
-          <a href="mailto:amr12elabd@gmail.com">amr12elabd@gmail.com</a>
-        </div>
-        <div class="contact-row">
-          <span class="ci">📍</span>
-          <span class="txt">Egypt — serving 8 governorates nationwide</span>
-        </div>
-        <div class="contact-row">
-          <span class="ci">🌐</span>
-          <a href="https://github.com/amr12elabd/DAMAK" target="_blank" rel="noopener">github.com/amr12elabd/DAMAK</a>
-        </div>
-        <div class="contact-row">
-          <span class="ci">🕐</span>
-          <span class="txt">Sun – Thu, 8:00 AM – 5:00 PM EET</span>
-        </div>
-      </div>
+<!-- ══ CTA BANNER ══ -->
+<div class="cta-banner">
+  <h2>Ready to Improve Your Yields?</h2>
+  <p>Talk to a DAMAK agronomist about the right product programme for your crop, soil, and season — at no cost.</p>
+  <div class="btn-group">
+    <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+    <a href="products.html" class="btn btn-outline">Browse Products</a>
+  </div>
+</div>
 
-      <!-- FORM NOTE: This is a front-end-only form. To make it functional, either:
-           (a) Set action="https://formspree.io/f/YOUR_ID" method="POST" and add a Formspree account, or
-           (b) Wire up a serverless function (e.g. AWS Lambda, Netlify Functions) as the POST endpoint.
-           Until then, the submit button will do nothing on the live site. -->
-      <div class="contact-form-wrap reveal-right">
-        <h3>Send Us a Message</h3>
-        <form id="contactForm" novalidate>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="fname">First Name *</label>
-              <input type="text" id="fname" name="first_name" placeholder="Ahmed" required />
-            </div>
-            <div class="form-group">
-              <label for="lname">Last Name</label>
-              <input type="text" id="lname" name="last_name" placeholder="Hassan" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address *</label>
-            <input type="email" id="email" name="email" placeholder="you@example.com" required />
-          </div>
-          <div class="form-group">
-            <label for="inquiry">Inquiry Type</label>
-            <select id="inquiry" name="inquiry_type">
-              <option value="">Select a topic…</option>
-              <option>Product Information</option>
-              <option>Sample Request</option>
-              <option>Distribution Partnership</option>
-              <option>Technical / Agronomic Support</option>
-              <option>Land Development Project</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Message *</label>
-            <textarea id="message" name="message" placeholder="Tell us about your farm, crop, or question…" required></textarea>
-          </div>
-          <button type="submit" class="form-submit">Send Message →</button>
-          <p class="form-note">We respond within one business day. Your information is never shared.</p>
-        </form>
-      </div>
-
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo">DAMAK<sup>®</sup></span>
+      <p>Advanced plant growth solutions and end-to-end agricultural development for Egypt's farming communities — since 2011.</p>
+      <span class="footer-tagline">Growing Egypt's Future</span>
     </div>
-  </section>
-
-  <!-- ══ FOOTER ══ -->
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <div class="logo">DAMAK<sup style="font-size:.45em;vertical-align:super;font-family:'Inter',sans-serif;font-weight:600;color:#e8cc7a;">®</sup></div>
-        <p>Advanced plant growth solutions and end-to-end agricultural development for Egypt's farming communities.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Products</h4>
-        <ul>
-          <li><a href="#products">Power Contanol</a></li>
-          <li><a href="#products">Macovit DRW</a></li>
-          <li><a href="#products">Brace Br</a></li>
-          <li><a href="#products">Sinolide One</a></li>
-          <li><a href="#products">Trimax</a></li>
-          <li><a href="#products">Damak Indole</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="#about">About DAMAK</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#team">Our Team</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <ul>
+        <li><a href="products.html#power-contanol">Power Contanol</a></li>
+        <li><a href="products.html#macovit-drw">Macovit DRW</a></li>
+        <li><a href="products.html#sinolide-one">Sinolide One</a></li>
+        <li><a href="products.html#trimax">Trimax</a></li>
+        <li><a href="products.html#damak-indole">Damak Indole</a></li>
+        <li><a href="products.html">View All →</a></li>
+      </ul>
     </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 <b style="color:var(--gold)">DAMAK</b> Agricultural Development. All rights reserved.</span>
-      <span>Egypt &nbsp;·&nbsp; Serving 8 Governorates</span>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About DAMAK</a></li>
+        <li><a href="about.html#timeline">Our History</a></li>
+        <li><a href="about.html#team">Leadership</a></li>
+        <li><a href="sustainability.html">Sustainability</a></li>
+        <li><a href="insights.html">Insights</a></li>
+      </ul>
     </div>
-  </footer>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="contact.html">Get in Touch</a></li>
+        <li><a href="contact.html#distributors">Find a Distributor</a></li>
+        <li><a href="mailto:amr12elabd@gmail.com">amr12elabd@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="copy">&copy; 2026 <em>DAMAK</em> Agricultural Development. All rights reserved.</span>
+    <div class="links">
+      <a href="sustainability.html">Sustainability</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
 
-  <!-- ══ SCRIPTS ══ -->
-  <script>
-    /* Intersection Observer — scroll reveals */
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          io.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.12 });
-
-    document.querySelectorAll('.reveal, .reveal-left, .reveal-right')
-      .forEach(el => io.observe(el));
-
-    /* Mobile nav toggle */
-    const toggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
-    toggle.addEventListener('click', () => {
-      toggle.classList.toggle('open');
-      navLinks.classList.toggle('open');
-    });
-    navLinks.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        toggle.classList.remove('open');
-        navLinks.classList.remove('open');
-      });
-    });
-
-    /* Contact form — front-end validation stub */
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const required = this.querySelectorAll('[required]');
-      let valid = true;
-      required.forEach(f => {
-        f.style.borderColor = f.value.trim() ? '' : '#e53935';
-        if (!f.value.trim()) valid = false;
-      });
-      if (valid) {
-        const btn = this.querySelector('.form-submit');
-        btn.textContent = '✓ Message Received — We\'ll be in touch!';
-        btn.style.background = 'var(--green-mid)';
-        btn.disabled = true;
-      }
-    });
-  </script>
-
+<script src="assets/damak.js"></script>
 </body>
 </html>

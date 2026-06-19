@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About DAMAK – Our Story, Mission & Team | Egypt Agricultural Development</title>
+  <meta name="description" content="Learn about DAMAK's history since 2011, our mission to advance Egyptian agriculture, and the team of agronomists and engineers behind our work." />
+  <meta property="og:title" content="About DAMAK – Our Story & Mission" />
+  <meta property="og:description" content="DAMAK has been advancing Egyptian agriculture since 2011 through plant growth solutions and expert agronomic support." />
+  <meta property="og:url" content="https://amr12elabd.github.io/DAMAK/about.html" />
+  <meta property="og:type" content="website" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"AboutPage","name":"About DAMAK","url":"https://amr12elabd.github.io/DAMAK/about.html","description":"DAMAK's company history, mission, and leadership team.","isPartOf":{"@type":"WebSite","name":"DAMAK Agricultural Development","url":"https://amr12elabd.github.io/DAMAK/"}}
+  </script>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%231a4a1f'/><path d='M32 52 C32 52 14 38 14 24 C14 16 22 10 32 14 C42 10 50 16 50 24 C50 38 32 52 32 52Z' fill='%234caf50'/><path d='M32 52 L32 24' stroke='%23c8a84b' stroke-width='2.5' stroke-linecap='round'/><path d='M32 36 C32 36 24 30 20 24' stroke='%23c8a84b' stroke-width='2' stroke-linecap='round' fill='none'/><path d='M32 30 C32 30 40 26 44 20' stroke='%23c8a84b' stroke-width='2' stroke-linecap='round' fill='none'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/damak.css" />
+  <style>
+    /* ── ABOUT PAGE SPECIFIC ── */
+    :root { --body-bg: #fff; }
+
+    /* Mission / Vision cards */
+    .mv-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+      max-width: var(--max-w); margin-inline: auto;
+    }
+    .mv-card {
+      border-radius: var(--radius); overflow: hidden;
+    }
+    .mv-card-header {
+      padding: 1.8rem;
+      background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+    }
+    .mv-card-header h3 { color: #fff; font-size: 1.3rem; }
+    .mv-card-body {
+      padding: 1.8rem; background: #fff;
+      border: 1px solid var(--border); border-top: none;
+      border-radius: 0 0 var(--radius) var(--radius);
+    }
+    .mv-card-body p { color: var(--muted); }
+
+    /* Values row */
+    .values-row {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1.5rem; max-width: var(--max-w); margin-inline: auto;
+    }
+    .value-card {
+      background: #fff; border-radius: var(--radius);
+      padding: 1.8rem; border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      border-top: 4px solid var(--green-light);
+    }
+    .value-card .icon { font-size: 2rem; margin-bottom: .8rem; }
+    .value-card h4 { color: var(--green-dark); margin-bottom: .4rem; font-size: 1rem; }
+    .value-card p { color: var(--muted); font-size: .88rem; }
+
+    /* Timeline */
+    #timeline { position: relative; }
+    .timeline-track {
+      max-width: 780px; margin-inline: auto;
+      position: relative; padding: 2rem 0;
+    }
+    .timeline-track::before {
+      content: '';
+      position: absolute; top: 0; bottom: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 2px; background: linear-gradient(to bottom, var(--green-light), var(--gold));
+      border-radius: 2px;
+    }
+    .tl-item {
+      display: flex; gap: 2rem; margin-bottom: 3rem;
+      align-items: flex-start;
+    }
+    .tl-item:nth-child(even) { flex-direction: row-reverse; }
+    .tl-content {
+      flex: 1;
+      background: #fff; border-radius: var(--radius);
+      padding: 1.5rem; box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+    }
+    .tl-item:nth-child(even) .tl-content { text-align: right; }
+    .tl-year {
+      font-family: 'Fraunces', serif; font-size: 1.6rem;
+      font-weight: 900; color: var(--gold);
+      min-width: 80px; text-align: center;
+      position: relative; padding-top: .2rem;
+    }
+    .tl-dot {
+      position: absolute; left: 50%; top: .5rem;
+      width: 14px; height: 14px;
+      background: var(--gold); border: 3px solid #fff;
+      border-radius: 50%; transform: translateX(-50%);
+      box-shadow: 0 0 0 3px var(--green-light);
+    }
+    .tl-spacer { flex: 1; }
+    .tl-content h4 { color: var(--green-dark); margin-bottom: .4rem; }
+    .tl-content p { color: var(--muted); font-size: .9rem; }
+
+    /* Leadership */
+    .team-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 2rem; max-width: var(--max-w); margin-inline: auto;
+    }
+    .team-card {
+      background: #fff; border-radius: var(--radius);
+      overflow: hidden; box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border); text-align: center;
+      transition: box-shadow .25s, transform .25s;
+    }
+    .team-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+    .team-photo {
+      height: 160px;
+      background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 4rem;
+    }
+    .team-info { padding: 1.4rem; }
+    .team-info h3 { color: var(--green-dark); font-size: 1.1rem; margin-bottom: .3rem; }
+    .team-info .role {
+      font-size: .8rem; font-weight: 600; color: var(--gold);
+      letter-spacing: .5px; text-transform: uppercase;
+      font-family: 'Inter', sans-serif; margin-bottom: .6rem;
+    }
+    .team-info p { font-size: .85rem; color: var(--muted); }
+
+    /* Download CTA */
+    .download-note {
+      text-align: center; padding: 2rem;
+      background: var(--cream); border-radius: var(--radius);
+      border: 1px dashed var(--border); max-width: 560px; margin-inline: auto;
+    }
+    .download-note p { color: var(--muted); font-size: .9rem; }
+
+    @media (max-width: 760px) {
+      .mv-grid { grid-template-columns: 1fr; }
+      .timeline-track::before { left: 20px; }
+      .tl-item, .tl-item:nth-child(even) { flex-direction: column; padding-left: 48px; }
+      .tl-year { text-align: left; font-size: 1.2rem; }
+      .tl-dot { left: -34px; }
+      .tl-item:nth-child(even) .tl-content { text-align: left; }
+      .tl-spacer { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">DAMAK<sup>®</sup></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="sustainability.html">Sustainability</a></li>
+    <li><a href="insights.html">Insights</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="lang-toggle">EN | عر</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> › <span>About</span></div>
+  <h1>Rooted in Egypt's<br/><em>Agricultural Future</em></h1>
+  <p>Since 2011, DAMAK has been building the bridge between global agronomic science and the Egyptian farmer — one field at a time.</p>
+</div>
+
+<!-- MISSION & VISION -->
+<section class="section section-cream">
+  <div class="section-title reveal">
+    <h2>Our Purpose</h2>
+    <div class="accent-line"></div>
+  </div>
+  <div class="mv-grid">
+    <div class="mv-card reveal d1">
+      <div class="mv-card-header"><h3>🌱 Our Mission</h3></div>
+      <div class="mv-card-body"><p>To equip Egyptian farmers with cutting-edge plant growth technologies and the agronomic knowledge to apply them correctly — increasing yields, reducing unnecessary inputs, and building farms that are more resilient to climate and market pressures.</p></div>
+    </div>
+    <div class="mv-card reveal d2">
+      <div class="mv-card-header"><h3>🌍 Our Vision</h3></div>
+      <div class="mv-card-body"><p>A self-sufficient agricultural Egypt where science, tradition, and sustainability converge to guarantee food security for future generations — and where every farmer has access to the same agronomic quality that large commercial operations take for granted.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="section section-white">
+  <div class="section-title reveal">
+    <h2>What We Stand For</h2>
+    <div class="accent-line"></div>
+  </div>
+  <div class="values-row">
+    <div class="value-card reveal d1">
+      <div class="icon">🤝</div>
+      <h4>Farmer-First Partnership</h4>
+      <p>We measure our success by our farmers' results — not by units shipped. Every product recommendation we make starts with understanding the individual farm.</p>
+    </div>
+    <div class="value-card reveal d2">
+      <div class="icon">🔬</div>
+      <h4>Scientific Integrity</h4>
+      <p>We don't overstate what our products can do. Our agronomists give accurate, evidence-based guidance — even when that means recommending a competitor's product.</p>
+    </div>
+    <div class="value-card reveal d3">
+      <div class="icon">🌿</div>
+      <h4>Environmental Responsibility</h4>
+      <p>Sustainable yield improvement — not maximum short-term output at the expense of soil health. We support practices that leave the land in better condition than we found it.</p>
+    </div>
+    <div class="value-card reveal d4">
+      <div class="icon">📖</div>
+      <h4>Knowledge Transfer</h4>
+      <p>Every farm visit, technical workshop, and product manual is designed to leave the farmer more capable than before — not more dependent on us.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="section section-cream" id="timeline">
+  <div class="section-title reveal">
+    <h2>Our Journey</h2>
+    <div class="accent-line"></div>
+    <p>From a single-focus import business to a multi-service agricultural development company.</p>
+  </div>
+  <!-- NOTE: Timeline events below use approximate/illustrative dates.
+       Please verify exact years with the family and update accordingly. -->
+  <div class="timeline-track">
+
+    <div class="tl-item reveal">
+      <div class="tl-content">
+        <h4>Foundation</h4>
+        <p>DAMAK Agricultural Development is established in Egypt with a founding mission to import and distribute high-quality plant growth regulators to Egyptian farmers who previously had limited access to these technologies.</p>
+      </div>
+      <div class="tl-year">2011<div class="tl-dot"></div></div>
+      <div class="tl-spacer"></div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-spacer"></div>
+      <div class="tl-year">2013<div class="tl-dot"></div></div>
+      <div class="tl-content">
+        <h4>First Product Portfolio</h4>
+        <p>Launch of the first dedicated product line including Power Contanol and Extra Indole — marking DAMAK's transition from importer to active product developer for the Egyptian market.</p>
+      </div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-content">
+        <h4>Field Agronomy Programme</h4>
+        <p>DAMAK establishes its in-house field agronomy team — agricultural engineers who work directly with farmers across governorates, providing on-site technical guidance alongside product supply.</p>
+      </div>
+      <div class="tl-year">2016<div class="tl-dot"></div></div>
+      <div class="tl-spacer"></div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-spacer"></div>
+      <div class="tl-year">2018<div class="tl-dot"></div></div>
+      <div class="tl-content">
+        <h4>Portfolio Expansion</h4>
+        <p>Introduction of Macovit DRW, Brace Br, Sinolide One, and Trimax — expanding the portfolio from root and growth support into flowering enhancement and structural plant management.</p>
+      </div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-content">
+        <h4>Damak Indole Launch</h4>
+        <p>Release of Damak Indole — the company's flagship root-stimulant formulation, specifically calibrated for Egypt's saline-soil and high-salinity irrigation conditions. Reaches 8 governorates in its first season.</p>
+      </div>
+      <div class="tl-year">2021<div class="tl-dot"></div></div>
+      <div class="tl-spacer"></div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-spacer"></div>
+      <div class="tl-year">2024</div>
+      <div class="tl-content">
+        <h4>Land Reclamation Services</h4>
+        <p>DAMAK expands beyond plant inputs into full land reclamation, irrigation design, and post-harvest logistics — becoming a comprehensive agricultural development partner rather than a product supplier.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- LEADERSHIP -->
+<section class="section section-white" id="team">
+  <div class="section-title reveal">
+    <h2>Leadership & Team</h2>
+    <div class="accent-line"></div>
+    <p>The people who bring DAMAK's mission to life — in the office, in the lab, and in the field.</p>
+  </div>
+  <div class="team-grid">
+
+    <!-- IMPORTANT: CEO name "Wafiq El-Abd" is the name provided by the family for this card.
+         Please confirm the correct spelling before publishing, and replace the emoji
+         placeholder with a real professional photo. -->
+    <div class="team-card reveal d1">
+      <div class="team-photo">👤</div>
+      <div class="team-info">
+        <h3>Wafiq El-Abd</h3>
+        <div class="role">Chief Executive Officer</div>
+        <p>Founder of DAMAK and driving force behind the company's vision of making world-class agronomic science accessible to Egyptian farmers. Over 20 years in Egyptian agricultural development.</p>
+      </div>
+    </div>
+
+    <!-- PLACEHOLDER — replace with real name, title, photo, and bio once provided by the family -->
+    <div class="team-card reveal d2">
+      <div class="team-photo">👤</div>
+      <div class="team-info">
+        <h3>[Name — PLACEHOLDER]</h3>
+        <div class="role">Sales & Marketing Director</div>
+        <p>Leads DAMAK's commercial relationships with distributors and farming cooperatives across Egypt's governorates. Specialist in agricultural product commercialisation.</p>
+      </div>
+    </div>
+
+    <!-- PLACEHOLDER — replace with real name, title, photo, and bio once provided by the family -->
+    <div class="team-card reveal d3">
+      <div class="team-photo">👤</div>
+      <div class="team-info">
+        <h3>[Name — PLACEHOLDER]</h3>
+        <div class="role">Import & Supply Chain Manager</div>
+        <p>Manages DAMAK's international procurement relationships and ensures product quality, availability, and regulatory compliance from source to farm gate.</p>
+      </div>
+    </div>
+
+    <!-- PLACEHOLDER — replace with real name, title, photo, and bio once provided by the family -->
+    <div class="team-card reveal d4">
+      <div class="team-photo">👤</div>
+      <div class="team-info">
+        <h3>[Name — PLACEHOLDER]</h3>
+        <div class="role">Technical Support Lead</div>
+        <p>Heads DAMAK's field agronomy programme. Coordinates the team of agricultural engineers who provide on-site crop support and product application guidance to farmers.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="text-align:center; margin-top:3rem" class="reveal">
+    <p style="color:var(--muted); margin-bottom:1.2rem;">DAMAK employs approximately 25 people across commercial, technical, and field operations in Egypt.</p>
+  </div>
+</section>
+
+<!-- COMPANY PROFILE DOWNLOAD -->
+<section class="section section-cream">
+  <div class="download-note reveal">
+    <!-- PLACEHOLDER — create a PDF company profile once the family provides full company content,
+         certifications, product registration details, and approved imagery.
+         Then link the PDF here. -->
+    <p>📄 <strong>Company Profile (PDF)</strong> — A downloadable company profile for distributors and partners is in preparation. Please <a href="contact.html" style="color:var(--green-mid);font-weight:700;">contact us directly</a> in the meantime for a full briefing pack.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-banner">
+  <h2>Work With DAMAK</h2>
+  <p>Whether you're a farmer, distributor, or agricultural investor — we'd like to hear from you.</p>
+  <div class="btn-group">
+    <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+    <a href="products.html" class="btn btn-outline">Our Products</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo">DAMAK<sup>®</sup></span>
+      <p>Advanced plant growth solutions and end-to-end agricultural development for Egypt's farming communities — since 2011.</p>
+      <span class="footer-tagline">Growing Egypt's Future</span>
+    </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <ul>
+        <li><a href="products.html#power-contanol">Power Contanol</a></li>
+        <li><a href="products.html#macovit-drw">Macovit DRW</a></li>
+        <li><a href="products.html#sinolide-one">Sinolide One</a></li>
+        <li><a href="products.html#trimax">Trimax</a></li>
+        <li><a href="products.html#damak-indole">Damak Indole</a></li>
+        <li><a href="products.html">View All →</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About DAMAK</a></li>
+        <li><a href="about.html#timeline">Our History</a></li>
+        <li><a href="about.html#team">Leadership</a></li>
+        <li><a href="sustainability.html">Sustainability</a></li>
+        <li><a href="insights.html">Insights</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="contact.html">Get in Touch</a></li>
+        <li><a href="contact.html#distributors">Find a Distributor</a></li>
+        <li><a href="mailto:amr12elabd@gmail.com">amr12elabd@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="copy">&copy; 2026 <em>DAMAK</em> Agricultural Development. All rights reserved.</span>
+    <div class="links"><a href="sustainability.html">Sustainability</a><a href="contact.html">Contact</a></div>
+  </div>
+</footer>
+
+<script src="assets/damak.js"></script>
+</body>
+</html>

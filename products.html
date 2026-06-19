@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products – DAMAK Plant Growth Regulators & Agricultural Inputs, Egypt</title>
+  <meta name="description" content="Browse DAMAK's full product portfolio: Power Contanol, Macovit DRW, Brace Br, Sinolide One, Trimax, Limitora, Extra Indole, Damak Indole — plant growth regulators for Egyptian crops." />
+  <meta property="og:title" content="DAMAK Products – Plant Growth Regulators for Egyptian Agriculture" />
+  <meta property="og:description" content="Eight specialist plant growth regulators and biostimulants formulated for Egypt's climate and crop profile." />
+  <meta property="og:url" content="https://amr12elabd.github.io/DAMAK/products.html" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%231a4a1f'/><path d='M32 52 C32 52 14 38 14 24 C14 16 22 10 32 14 C42 10 50 16 50 24 C50 38 32 52 32 52Z' fill='%234caf50'/><path d='M32 52 L32 24' stroke='%23c8a84b' stroke-width='2.5' stroke-linecap='round'/><path d='M32 36 C32 36 24 30 20 24' stroke='%23c8a84b' stroke-width='2' stroke-linecap='round' fill='none'/><path d='M32 30 C32 30 40 26 44 20' stroke='%23c8a84b' stroke-width='2' stroke-linecap='round' fill='none'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/damak.css" />
+  <style>
+    :root { --body-bg: var(--cream); }
+
+    /* ── CATEGORY FILTER ── */
+    .filter-bar {
+      display: flex; gap: .75rem; flex-wrap: wrap;
+      justify-content: center; margin-bottom: 3rem;
+    }
+    .filter-btn {
+      font-family: 'Inter', sans-serif; font-size: .84rem; font-weight: 700;
+      padding: .55rem 1.4rem; border-radius: 2rem; border: 1.5px solid var(--border);
+      background: #fff; color: var(--muted); cursor: pointer;
+      transition: background .2s, color .2s, border-color .2s;
+      letter-spacing: .3px;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--green-dark); color: #fff; border-color: var(--green-dark);
+    }
+
+    /* ── PRODUCTS GRID ── */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem; max-width: var(--max-w); margin-inline: auto;
+    }
+
+    .product-card {
+      background: #fff; border-radius: var(--radius);
+      overflow: hidden; box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      display: flex; flex-direction: column;
+      transition: box-shadow .25s, transform .25s;
+    }
+    .product-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+
+    .product-header {
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 100%);
+      padding: 1.8rem 2rem 1.4rem; position: relative; overflow: hidden;
+    }
+    .product-header::after {
+      content: ''; position: absolute; top: -30px; right: -30px;
+      width: 110px; height: 110px;
+      background: rgba(255,255,255,.05); border-radius: 50%;
+    }
+    .product-tag {
+      display: inline-block;
+      background: rgba(200,168,75,.25); color: var(--gold-light);
+      font-size: .7rem; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; padding: .22rem .8rem; border-radius: 2rem;
+      margin-bottom: .7rem; font-family: 'Inter', sans-serif;
+    }
+    .product-header h2 {
+      color: #fff; font-size: 1.5rem; font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .product-body {
+      padding: 1.8rem 2rem; flex: 1; display: flex; flex-direction: column;
+    }
+    .product-body p {
+      color: var(--muted); font-size: .93rem; line-height: 1.7; margin-bottom: 1.2rem;
+    }
+    .product-meta {
+      display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; margin-bottom: 1.5rem;
+    }
+    .meta-item {
+      background: var(--cream); border-radius: 8px; padding: .8rem;
+    }
+    .meta-item .meta-label {
+      font-size: .68rem; font-weight: 700; letter-spacing: 1px; color: var(--green-mid);
+      text-transform: uppercase; margin-bottom: .25rem; font-family: 'Inter', sans-serif;
+    }
+    .meta-item .meta-val { font-size: .85rem; color: var(--text); font-weight: 500; }
+    .product-actions { margin-top: auto; }
+    .product-actions a {
+      display: flex; align-items: center; justify-content: center; gap: .4rem;
+      background: var(--green-dark); color: #fff;
+      text-decoration: none; font-weight: 700; font-size: .88rem;
+      padding: .75rem 1.5rem; border-radius: 2rem;
+      transition: background .2s, transform .15s;
+      font-family: 'Inter', sans-serif;
+    }
+    .product-actions a:hover { background: var(--green-mid); transform: translateY(-1px); }
+
+    /* ── COMING SOON BANNER ── */
+    .coming-soon-banner {
+      display: none;
+      max-width: var(--max-w); margin-inline: auto;
+      background: #fff; border: 2px dashed var(--border);
+      border-radius: var(--radius); padding: 3rem 2rem; text-align: center;
+    }
+    .coming-soon-banner h3 { color: var(--green-dark); margin-bottom: .6rem; }
+    .coming-soon-banner p { color: var(--muted); }
+
+    /* ── HOW IT WORKS STRIP ── */
+    .how-strip {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0; max-width: var(--max-w); margin-inline: auto;
+      background: #fff; border-radius: var(--radius);
+      border: 1px solid var(--border); overflow: hidden;
+    }
+    .how-step {
+      padding: 2rem; text-align: center;
+      border-right: 1px solid var(--border);
+    }
+    .how-step:last-child { border-right: none; }
+    .how-step .step-no {
+      font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 900;
+      color: var(--green-pale); display: block; line-height: 1;
+      position: relative;
+    }
+    .how-step .step-no::after {
+      content: attr(data-n);
+      position: absolute; inset: 0; display: flex;
+      align-items: center; justify-content: center;
+      color: var(--green-mid);
+    }
+    .how-step h4 { color: var(--green-dark); font-size: .95rem; margin-bottom: .4rem; margin-top: .5rem; }
+    .how-step p { font-size: .83rem; color: var(--muted); }
+
+    @media (max-width: 600px) {
+      .products-grid { grid-template-columns: 1fr; }
+      .product-meta { grid-template-columns: 1fr; }
+      .how-strip { grid-template-columns: 1fr; }
+      .how-step { border-right: none; border-bottom: 1px solid var(--border); }
+      .how-step:last-child { border-bottom: none; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">DAMAK<sup>®</sup></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="products.html" class="active">Products</a></li>
+    <li><a href="sustainability.html">Sustainability</a></li>
+    <li><a href="insights.html">Insights</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="lang-toggle">EN | عر</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="page-hero" style="--body-bg: var(--cream);">
+  <div class="breadcrumb"><a href="index.html">Home</a> › <span>Products</span></div>
+  <h1>Our <em>Product Portfolio</em></h1>
+  <p>Eight specialised plant growth regulators and biostimulants — formulated for Egypt's climate, crops, and soil conditions. Every product comes with full technical support from our in-field agronomy team.</p>
+</div>
+
+<section class="section section-cream">
+  <div class="container">
+
+    <!-- Category Filter -->
+    <div class="filter-bar reveal">
+      <button class="filter-btn active" data-cat="all">All Products</button>
+      <button class="filter-btn" data-cat="pgr">Growth Regulators</button>
+      <button class="filter-btn" data-cat="fertilizer">Fertilizers</button>
+      <button class="filter-btn" data-cat="pesticide">Pesticides</button>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="products-grid">
+
+      <div class="product-card reveal d1" data-cat="pgr" id="power-contanol">
+        <div class="product-header">
+          <div class="product-tag">Plant Growth Regulator</div>
+          <h2>Power Contanol</h2>
+        </div>
+        <div class="product-body">
+          <p>A broad-spectrum plant growth regulator that optimises hormonal balance during critical vegetative and reproductive stages. Power Contanol improves cell elongation, strengthens stem structure, and helps crops recover vigour after abiotic stress events such as heat or drought episodes.</p>
+          <div class="product-meta">
+            <div class="meta-item"><div class="meta-label">Category</div><div class="meta-val">Growth Regulator</div></div>
+            <div class="meta-item"><div class="meta-label">Application</div><div class="meta-val">Foliar Spray</div></div>
+            <div class="meta-item"><div class="meta-label">Growth Stage</div><div class="meta-val">Vegetative to Reproductive</div></div>
+            <div class="meta-item"><div class="meta-label">Key Crops</div><div class="meta-val">Cereals, Vegetables, Fruit Trees</div></div>
+          </div>
+          <div class="product-actions"><a href="contact.html?product=power-contanol">Request Information →</a></div>
+        </div>
+      </div>
+
+      <div class="product-card reveal d2" data-cat="pgr" id="macovit-drw">
+        <div class="product-header">
+          <div class="product-tag">Biostimulant</div>
+          <h2>Macovit DRW</h2>
+        </div>
+        <div class="product-body">
+          <p>A water-soluble micronutrient and amino-acid complex that enhances nutrient uptake efficiency through both the leaf surface and root system. Macovit DRW supports rapid canopy green-up, improves chlorophyll density, and primes crops for peak photosynthetic activity during high-demand growth phases.</p>
+          <div class="product-meta">
+            <div class="meta-item"><div class="meta-label">Category</div><div class="meta-val">Biostimulant</div></div>
+            <div class="meta-item"><div class="meta-label">Application</div><div class="meta-val">Foliar / Fertigation</div></div>
+            <div class="meta-item"><div class="meta-label">Growth Stage</div><div class="meta-val">Tillering / Branching</div></div>
+            <div class="meta-item"><div class="meta-label">Key Crops</div><div class="meta-val">Leafy Vegetables, Cotton, Legumes</div></div>
+          </div>
+          <div class="product-actions"><a href="contact.html?product=macovit-drw">Request Information →</a></div>
+        </div>
+      </div>
+
+      <div class="product-card reveal d3" data-cat="pgr" id="brace-br">
+        <div class="product-header">
+          <div class="product-tag">Structural Support</div>
+          <h2>Brace Br</h2>
+        </div>
+        <div class="product-body">
+          <p>Formulated to reinforce cell-wall integrity and reduce lodging risk in tall-season crops. Brace Br promotes compact, sturdy stem architecture by moderating internodal elongation without suppressing overall canopy development — protecting yield potential in exposed field conditions.</p>
+          <div class="product-meta">
+            <div class="meta-item"><div class="meta-label">Category</div><div class="meta-val">Growth Controller</div></div>
+            <div class="meta-item"><div class="meta-label">Application</div><div class="meta-val">Foliar Spray</div></div>
+            <div class="meta-item"><div class="meta-label">Growth Stage</div><div class="meta-val">Pre-Heading</div></div>
+            <div class="meta-item"><div class="meta-label">Key Crops</div><div class="meta-val">Wheat, Maize, Sorghum</div></div>
+          </div>
+          <div class="product-actions"><a href="contact.html?product=brace-br">Request Information →</a></div>
+        </div>
+      </div>
+
+      <div class="product-card reveal d1" data-cat="pgr" id="sinolide-one">
+        <div class="product-header">
+          <div class="product-tag">Flowering Enhancer</div>
+          <h2>Sinolide One</h2>
+        </div>
+        <div class="product-body">
+          <p>A targeted plant growth regulator that synchronises and intensifies flowering initiation. Sinolide One improves pollen viability, increases fruit-set rates, and significantly reduces flower drop caused by temperature fluctuations or transient nutrient imbalances during the critical bloom window.</p>
+          <div class="product-meta">
+            <div class="meta-item"><div class="meta-label">Category</div><div class="meta-val">Flowering Regulator</div></div>
+            <div class="meta-item"><div class="meta-label">Application</div><div class="meta-val">Foliar Spray</div></div>
+            <div class="meta-item"><div class="meta-label">Growth Stage</div><div class="meta-val">Pre-Bloom to Full Bloom</div></div>
+            <div class="meta-item"><div class="meta-label">Key Crops</div><div class="meta-val">Tomatoes, Cucumbers, Stone Fruits</div></div>
+          </div>
+          <div class="product-actions"><a href="contact.html?product=sinolide-one">Request Information →</a></div>
+        </div>
+      </div>
+
+      <div class="product-card reveal d2" data-cat="pgr" id="trimax">
+        <div class="product-header">
+          <div class="product-tag">Multi-Action PGR</div>
+          <h2>Trimax</h2>
+        </div>
+        <div class="product-body">
+          <p>A triple-mode plant growth regulator combining auxin-type, cytokinin-type, and gibberellin-type activity in one balanced formulation. Trimax drives uniform cell division, lateral root development, and early fruit sizing — giving crops a competitive head-start from germination through to the critical establishment phase.</p>
+          <div class="product-meta">
+            <div class="meta-item"><div class="meta-label">Category</div><div class="meta-val">Multi-Hormone PGR</div></div>
+            <div class="meta-item"><div class="meta-label">Application</div><div class="meta-val">Foliar / Soil Drench</div></div>
+            <div class="meta-item"><div class="meta-label">Growth Stage</div><div class="meta-val">Early Season / Fruit Sizing</div></div>
+            <div class="meta-item"><div class="meta-label">Key Crops</div><div class="meta-val">Broad Spectrum</div></div>
+          </div>
+          <div class="product-actions"><a href="contact.html?product=trimax">Request Information →</a></div>
+        </div>
+      </div>
+
+      <div class="product-card reveal d3" data-cat="pgr" id="limitora">
+        <div class="product-header">
+          <div class="product-tag">Growth Controller</div>
+          <h2>Limitora</h2>
+        </div>
+        <div class="product-body">
+          <p>A precision growth-control agent that curbs excessive vegetative growth, redirecting the plant's metabolic energy toward reproductive organs. Limitora improves canopy light penetration, reduces pest and disease pressure in dense plantings, and improves the marketable yield-to-biomass ratio.</p>
+          <div class="product-meta">
+            <div class="meta-item"><div class="meta-label">Category</div><div class="meta-val">Growth Retardant</div></div>
+            <div class="meta-item"><div class="meta-label">Application</div><div class="meta-val">Foliar Spray</div></div>
+            <div class="meta-item"><div class="meta-label">Growth Stage</div><div class="meta-val">Active Vegetative Phase</div></div>
+            <div class="meta-item"><div class="meta-label">Key Crops</div><div class="meta-val">Grapes, Citrus, High-Density Veg</div></div>
+          </div>
+          <div class="product-actions"><a href="contact.html?product=limitora">Request Information →</a></div>
+        </div>
+      </div>
+
+      <div class="product-card reveal d1" data-cat="pgr" id="extra-indole">
+        <div class="product-header">
+          <div class="product-tag">Root Stimulant</div>
+          <h2>Extra Indole</h2>
+        </div>
+        <div class="product-body">
+          <p>An indole-based root-promoting formulation that stimulates the development of a dense, extensive lateral root system. Extra Indole accelerates transplant establishment, improves water and mineral absorption in developing root zones, and reduces transplant shock in seedlings and vegetative cuttings.</p>
+          <div class="product-meta">
+            <div class="meta-item"><div class="meta-label">Category</div><div class="meta-val">Root Stimulant</div></div>
+            <div class="meta-item"><div class="meta-label">Application</div><div class="meta-val">Drench / Root Dip</div></div>
+            <div class="meta-item"><div class="meta-label">Growth Stage</div><div class="meta-val">Transplanting / Propagation</div></div>
+            <div class="meta-item"><div class="meta-label">Key Crops</div><div class="meta-val">Strawberries, Nursery Stock, Root Veg</div></div>
+          </div>
+          <div class="product-actions"><a href="contact.html?product=extra-indole">Request Information →</a></div>
+        </div>
+      </div>
+
+      <div class="product-card reveal d2" data-cat="pgr" id="damak-indole">
+        <div class="product-header">
+          <div class="product-tag">Premium Root PGR</div>
+          <h2>Damak Indole</h2>
+        </div>
+        <div class="product-body">
+          <p>DAMAK's flagship auxin formulation — optimised for Egypt's saline soils and high-salinity irrigation water. Damak Indole promotes deep, robust rooting, increases tolerance to soil-borne stress, and supports long-season perennial crops through sustained root-zone auxin activity across the full growing season.</p>
+          <div class="product-meta">
+            <div class="meta-item"><div class="meta-label">Category</div><div class="meta-val">Premium Root PGR</div></div>
+            <div class="meta-item"><div class="meta-label">Application</div><div class="meta-val">Soil Drench / Foliar</div></div>
+            <div class="meta-item"><div class="meta-label">Growth Stage</div><div class="meta-val">Full Season</div></div>
+            <div class="meta-item"><div class="meta-label">Key Crops</div><div class="meta-val">Fruit Trees, Long-Season Crops</div></div>
+          </div>
+          <div class="product-actions"><a href="contact.html?product=damak-indole">Request Information →</a></div>
+        </div>
+      </div>
+
+    </div><!-- /products-grid -->
+
+    <!-- Coming Soon — shown when Fertilizers or Pesticides filter is active -->
+    <!-- NOTE: add real product data for Fertilizers and Pesticides once available from the family -->
+    <div class="coming-soon-banner">
+      <h3>Coming Soon</h3>
+      <p>DAMAK is expanding its product range into this category. <a href="contact.html" style="color:var(--green-mid);font-weight:700;">Contact us</a> to be notified when new products launch — or to discuss your specific crop needs with our agronomic team.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- HOW TO WORK WITH DAMAK -->
+<section class="section section-white">
+  <div class="section-title reveal">
+    <h2>How We Support Your Crop</h2>
+    <div class="accent-line"></div>
+    <p>From first contact to post-harvest — DAMAK's process is designed around your farm, not a generic sales cycle.</p>
+  </div>
+  <div class="how-strip reveal">
+    <div class="how-step">
+      <span class="step-no" data-n="1">1</span>
+      <h4>Crop Assessment</h4>
+      <p>Our agronomist visits your farm or reviews your soil analysis and crop history remotely.</p>
+    </div>
+    <div class="how-step">
+      <span class="step-no" data-n="2">2</span>
+      <h4>Programme Design</h4>
+      <p>We recommend the right products, timing, and rates for your specific crop, stage, and conditions.</p>
+    </div>
+    <div class="how-step">
+      <span class="step-no" data-n="3">3</span>
+      <h4>In-Season Support</h4>
+      <p>Our team remains available throughout the season for on-site visits and remote consultation.</p>
+    </div>
+    <div class="how-step">
+      <span class="step-no" data-n="4">4</span>
+      <h4>Harvest Evaluation</h4>
+      <p>We review results with you post-harvest to refine the programme for the following season.</p>
+    </div>
+  </div>
+</section>
+
+<div class="cta-banner">
+  <h2>Need Help Choosing the Right Product?</h2>
+  <p>Tell our agronomists about your crop and growing conditions — we'll recommend the right programme, not just a product list.</p>
+  <div class="btn-group">
+    <a href="contact.html" class="btn btn-primary">Talk to an Agronomist</a>
+    <a href="about.html" class="btn btn-outline">About Our Team</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo">DAMAK<sup>®</sup></span>
+      <p>Advanced plant growth solutions and end-to-end agricultural development for Egypt's farming communities — since 2011.</p>
+      <span class="footer-tagline">Growing Egypt's Future</span>
+    </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <ul>
+        <li><a href="#power-contanol">Power Contanol</a></li>
+        <li><a href="#macovit-drw">Macovit DRW</a></li>
+        <li><a href="#sinolide-one">Sinolide One</a></li>
+        <li><a href="#trimax">Trimax</a></li>
+        <li><a href="#damak-indole">Damak Indole</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About DAMAK</a></li>
+        <li><a href="about.html#timeline">Our History</a></li>
+        <li><a href="sustainability.html">Sustainability</a></li>
+        <li><a href="insights.html">Insights</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="contact.html">Get in Touch</a></li>
+        <li><a href="contact.html#distributors">Find a Distributor</a></li>
+        <li><a href="mailto:amr12elabd@gmail.com">amr12elabd@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="copy">&copy; 2026 <em>DAMAK</em> Agricultural Development. All rights reserved.</span>
+    <div class="links"><a href="sustainability.html">Sustainability</a><a href="contact.html">Contact</a></div>
+  </div>
+</footer>
+
+<script src="assets/damak.js"></script>
+</body>
+</html>

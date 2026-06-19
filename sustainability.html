@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sustainability – DAMAK's Commitment to Responsible Agriculture, Egypt</title>
+  <meta name="description" content="DAMAK is committed to sustainable agricultural practices, responsible product stewardship, and supporting the long-term health of Egypt's farming land and farming communities." />
+  <meta property="og:title" content="Sustainability – DAMAK Agricultural Development" />
+  <meta property="og:description" content="Our commitment to responsible agriculture, farmer livelihoods, and long-term soil health across Egypt." />
+  <meta property="og:url" content="https://amr12elabd.github.io/DAMAK/sustainability.html" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%231a4a1f'/><path d='M32 52 C32 52 14 38 14 24 C14 16 22 10 32 14 C42 10 50 16 50 24 C50 38 32 52 32 52Z' fill='%234caf50'/><path d='M32 52 L32 24' stroke='%23c8a84b' stroke-width='2.5' stroke-linecap='round'/><path d='M32 36 C32 36 24 30 20 24' stroke='%23c8a84b' stroke-width='2' stroke-linecap='round' fill='none'/><path d='M32 30 C32 30 40 26 44 20' stroke='%23c8a84b' stroke-width='2' stroke-linecap='round' fill='none'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/damak.css" />
+  <style>
+    /* ── SUSTAINABILITY PAGE SPECIFIC ── */
+    .commitment-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem; max-width: var(--max-w); margin-inline: auto;
+    }
+    .commitment-card {
+      background: #fff; border-radius: var(--radius);
+      padding: 2.2rem; box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      border-top: 5px solid var(--green-light);
+      transition: box-shadow .25s, transform .25s;
+    }
+    .commitment-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .commitment-card .icon { font-size: 2.2rem; margin-bottom: 1rem; }
+    .commitment-card h3 { color: var(--green-dark); font-size: 1.15rem; margin-bottom: .6rem; }
+    .commitment-card p { color: var(--muted); font-size: .93rem; }
+
+    /* Practices list */
+    .practices-layout {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+      max-width: var(--max-w); margin-inline: auto; align-items: start;
+    }
+    .practice-list { display: flex; flex-direction: column; gap: 1rem; }
+    .practice-item {
+      display: flex; align-items: flex-start; gap: 1rem;
+      padding: 1.2rem; background: #fff; border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+    .practice-item .pi-icon {
+      width: 40px; height: 40px; border-radius: 10px;
+      background: var(--green-pale); color: var(--green-mid);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; flex-shrink: 0;
+    }
+    .practice-item h4 { color: var(--green-dark); font-size: .95rem; margin-bottom: .25rem; }
+    .practice-item p { font-size: .85rem; color: var(--muted); margin: 0; }
+
+    .vision-box {
+      background: linear-gradient(135deg, var(--green-dark), #2a6030);
+      border-radius: var(--radius); padding: 3rem;
+      color: #fff; position: sticky; top: 90px;
+    }
+    .vision-box h3 { font-size: 1.5rem; color: var(--gold); margin-bottom: 1rem; }
+    .vision-box p { color: #a5d6a5; line-height: 1.75; margin-bottom: 1rem; font-size: .95rem; }
+    .vision-box p:last-child { margin-bottom: 0; }
+
+    /* Certifications placeholder */
+    .certs-box {
+      max-width: 760px; margin-inline: auto;
+      background: #fff; border: 2px dashed var(--border);
+      border-radius: var(--radius); padding: 2.5rem; text-align: center;
+    }
+    .certs-box h3 { color: var(--green-dark); margin-bottom: .8rem; }
+    .certs-box p { color: var(--muted); font-size: .9rem; max-width: 540px; margin-inline: auto; }
+    .cert-placeholders {
+      display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;
+    }
+    .cert-box {
+      width: 130px; height: 80px;
+      background: var(--cream); border: 1px solid var(--border);
+      border-radius: 8px; display: flex; align-items: center; justify-content: center;
+      font-size: .7rem; color: #aaa; font-weight: 600; letter-spacing: .5px;
+      text-align: center; padding: .5rem;
+    }
+
+    /* Farmer impact section */
+    .impact-numbers {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem; max-width: var(--max-w); margin-inline: auto;
+    }
+    .impact-num {
+      text-align: center; padding: 2rem;
+      background: #fff; border-radius: var(--radius);
+      border: 1px solid var(--border); box-shadow: var(--shadow-sm);
+    }
+    .impact-num .big {
+      font-family: 'Fraunces', serif; font-size: 2.8rem; font-weight: 900;
+      color: var(--green-mid); display: block; margin-bottom: .3rem;
+    }
+    .impact-num p { font-size: .85rem; color: var(--muted); }
+
+    @media (max-width: 760px) {
+      .practices-layout { grid-template-columns: 1fr; }
+      .vision-box { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">DAMAK<sup>®</sup></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="sustainability.html" class="active">Sustainability</a></li>
+    <li><a href="insights.html">Insights</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="lang-toggle">EN | عر</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> › <span>Sustainability</span></div>
+  <h1>Farming Responsibly<br/><em>for the Long Term</em></h1>
+  <p>DAMAK's sustainability commitments reflect a simple belief: healthy farms require healthy soil, healthy farmers, and honest agronomic guidance. None of these can be sacrificed for short-term output.</p>
+</div>
+
+<!-- CORE COMMITMENTS -->
+<section class="section section-cream">
+  <div class="section-title reveal">
+    <h2>Our Commitments</h2>
+    <div class="accent-line"></div>
+    <p>These are the principles that guide how we develop products, support farmers, and conduct our business across Egypt.</p>
+  </div>
+  <div class="commitment-grid">
+    <div class="commitment-card reveal d1">
+      <div class="icon">🌱</div>
+      <h3>Soil Health First</h3>
+      <p>We actively promote practices that protect and improve soil structure, organic matter, and biological activity. Our agronomists are trained to recommend soil-building interventions alongside yield-improvement inputs — not instead of them.</p>
+    </div>
+    <div class="commitment-card reveal d2">
+      <div class="icon">💧</div>
+      <h3>Water Efficiency</h3>
+      <p>Egypt's freshwater supply is one of agriculture's most pressing constraints. DAMAK actively advises on water-efficient irrigation programmes and formulates products for use within drip and microirrigation systems that minimise water waste.</p>
+    </div>
+    <div class="commitment-card reveal d3">
+      <div class="icon">👨‍🌾</div>
+      <h3>Farmer Livelihoods</h3>
+      <p>Sustainable agriculture means economically viable farming. We price our products and technical support to be accessible to small and medium-scale farmers — not just large commercial operations — and we work to improve net income alongside yield.</p>
+    </div>
+    <div class="commitment-card reveal d1">
+      <div class="icon">🧪</div>
+      <h3>Responsible Product Stewardship</h3>
+      <p>Every product in the DAMAK portfolio is sourced from manufacturers operating within internationally recognised quality and safety frameworks. We do not distribute products that lack documented safety profiles for responsible agricultural use.</p>
+    </div>
+    <div class="commitment-card reveal d2">
+      <div class="icon">📚</div>
+      <h3>Knowledge & Capacity Building</h3>
+      <p>We invest in farmer education as part of every engagement. Field days, technical workshops, and on-farm demonstrations are part of how DAMAK distributes knowledge — not just products.</p>
+    </div>
+    <div class="commitment-card reveal d3">
+      <div class="icon">🌍</div>
+      <h3>Long-Term Land Stewardship</h3>
+      <p>Land reclamation projects are planned and executed with long-term productivity in mind — avoiding practices that improve short-term yield at the cost of accelerated soil degradation, salinity build-up, or water-table depletion.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRACTICES -->
+<section class="section section-white">
+  <div class="section-title reveal">
+    <h2>How We Practice What We Preach</h2>
+    <div class="accent-line"></div>
+  </div>
+  <div class="practices-layout">
+    <div class="practice-list">
+      <div class="practice-item reveal d1">
+        <div class="pi-icon">🔬</div>
+        <div>
+          <h4>Soil & Tissue Testing Before Recommendations</h4>
+          <p>Our agronomists conduct or request soil and tissue analysis before finalising any product programme — avoiding blanket prescription that ignores on-farm conditions.</p>
+        </div>
+      </div>
+      <div class="practice-item reveal d2">
+        <div class="pi-icon">📋</div>
+        <div>
+          <h4>Application Rate Guidance</h4>
+          <p>Every DAMAK product comes with detailed technical guidance on timing, rate, and application method — formulated to achieve results with the minimum effective dose.</p>
+        </div>
+      </div>
+      <div class="practice-item reveal d3">
+        <div class="pi-icon">🌿</div>
+        <div>
+          <h4>Integrated Crop Management</h4>
+          <p>We position plant growth regulators as one component within a broader integrated crop management approach — not as a standalone solution that replaces good agronomic practice.</p>
+        </div>
+      </div>
+      <div class="practice-item reveal d1">
+        <div class="pi-icon">🤝</div>
+        <div>
+          <h4>Post-Season Review</h4>
+          <p>DAMAK agronomists conduct post-harvest evaluations with participating farmers to assess what worked, what didn't, and how to optimise the following season's programme.</p>
+        </div>
+      </div>
+      <div class="practice-item reveal d2">
+        <div class="pi-icon">📦</div>
+        <div>
+          <h4>Supply Chain Transparency</h4>
+          <p>We maintain documented relationships with our manufacturing and import partners and can provide sourcing information to distributors and institutional buyers on request.</p>
+        </div>
+      </div>
+    </div>
+    <div class="vision-box reveal-right">
+      <h3>Our Long-Term View</h3>
+      <p>Egypt loses agricultural land to urbanisation, salinisation, and soil degradation every year. DAMAK's work on land reclamation and sustainable crop management is, in part, a response to this — a practical effort to expand and protect the agricultural base that Egyptian food security depends on.</p>
+      <p>We don't claim to have all the answers. But we believe that the agribusiness sector has a responsibility to leave Egyptian farmland in better condition than it found it — and we try to operate accordingly.</p>
+      <p>This page reflects our commitments and current practices. It is not a list of formal certifications — we have noted below what standards we intend to pursue as the organisation grows.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS PLACEHOLDER -->
+<!-- NOTE: The following section is a placeholder. Before listing any certification, standard, or
+     registration number on this page, it must be verified as genuine and current. Do NOT publish
+     specific ISO numbers, organic certification codes, or regulatory registration numbers until they
+     are confirmed by the DAMAK team and the relevant certifying body.
+     Standards to investigate and potentially pursue: ISO 9001 (quality management),
+     GLOBALG.A.P. (good agricultural practice), Egyptian Ministry of Agriculture product
+     registration, and relevant import compliance documentation. -->
+<section class="section section-cream">
+  <div class="section-title reveal">
+    <h2>Standards & Quality</h2>
+    <div class="accent-line"></div>
+    <p>DAMAK products are sourced from manufacturers operating within internationally recognised quality frameworks. Full certification details are being prepared for publication.</p>
+  </div>
+  <div class="certs-box reveal">
+    <h3>Certifications & Registrations</h3>
+    <p>We are in the process of compiling and verifying our full certification documentation for public display. In the meantime, distributors and institutional buyers may request our current quality and compliance documentation directly from our team.</p>
+    <div class="cert-placeholders">
+      <div class="cert-box">[Quality Standard — PLACEHOLDER]</div>
+      <div class="cert-box">[Manufacturing Standard — PLACEHOLDER]</div>
+      <div class="cert-box">[Egyptian Registration — PLACEHOLDER]</div>
+      <div class="cert-box">[Import Compliance — PLACEHOLDER]</div>
+    </div>
+    <br/>
+    <a href="contact.html" class="btn btn-secondary btn-sm">Request Compliance Documentation</a>
+  </div>
+</section>
+
+<!-- FARMER IMPACT -->
+<section class="section section-dark">
+  <div class="section-title on-dark reveal">
+    <h2>Impact Across Egypt</h2>
+    <div class="accent-line"></div>
+    <p>The numbers that matter most to us are the ones that appear in a farmer's harvest record.</p>
+  </div>
+  <div class="impact-numbers">
+    <div class="impact-num reveal d1">
+      <span class="big">8</span>
+      <p>Egyptian governorates where DAMAK products and services are currently active</p>
+    </div>
+    <div class="impact-num reveal d2">
+      <span class="big">3,000+</span>
+      <p>Farmers who have used DAMAK products and received technical field support</p>
+    </div>
+    <div class="impact-num reveal d3">
+      <span class="big">50,000+</span>
+      <p>Feddans of agricultural land touched by DAMAK development projects</p>
+    </div>
+    <div class="impact-num reveal d4">
+      <span class="big">15+</span>
+      <p>Years of active agricultural development experience in Egyptian conditions</p>
+    </div>
+  </div>
+</section>
+
+<div class="cta-banner">
+  <h2>Committed to the Same Values?</h2>
+  <p>We actively seek distribution partners, agricultural investors, and institutional collaborators who share our commitment to responsible, farmer-first agriculture.</p>
+  <div class="btn-group">
+    <a href="contact.html" class="btn btn-primary">Talk to Our Team</a>
+    <a href="about.html" class="btn btn-outline">About DAMAK</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo">DAMAK<sup>®</sup></span>
+      <p>Advanced plant growth solutions and end-to-end agricultural development for Egypt's farming communities — since 2011.</p>
+      <span class="footer-tagline">Growing Egypt's Future</span>
+    </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <ul>
+        <li><a href="products.html#power-contanol">Power Contanol</a></li>
+        <li><a href="products.html#macovit-drw">Macovit DRW</a></li>
+        <li><a href="products.html#sinolide-one">Sinolide One</a></li>
+        <li><a href="products.html#trimax">Trimax</a></li>
+        <li><a href="products.html#damak-indole">Damak Indole</a></li>
+        <li><a href="products.html">View All →</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About DAMAK</a></li>
+        <li><a href="about.html#timeline">Our History</a></li>
+        <li><a href="about.html#team">Leadership</a></li>
+        <li><a href="sustainability.html">Sustainability</a></li>
+        <li><a href="insights.html">Insights</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="contact.html">Get in Touch</a></li>
+        <li><a href="contact.html#distributors">Find a Distributor</a></li>
+        <li><a href="mailto:amr12elabd@gmail.com">amr12elabd@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="copy">&copy; 2026 <em>DAMAK</em> Agricultural Development. All rights reserved.</span>
+    <div class="links"><a href="sustainability.html">Sustainability</a><a href="contact.html">Contact</a></div>
+  </div>
+</footer>
+
+<script src="assets/damak.js"></script>
+</body>
+</html>

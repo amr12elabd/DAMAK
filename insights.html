@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agricultural Insights – DAMAK | Practical Agronomy for Egyptian Farmers</title>
+  <meta name="description" content="Practical agronomic articles from DAMAK's field team: soil management, plant growth regulators, irrigation, crop nutrition, and growing advice for Egyptian conditions." />
+  <meta property="og:title" content="Agricultural Insights – DAMAK" />
+  <meta property="og:description" content="Practical agronomic knowledge written for Egyptian growing conditions by DAMAK's field agronomy team." />
+  <meta property="og:url" content="https://amr12elabd.github.io/DAMAK/insights.html" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%231a4a1f'/><path d='M32 52 C32 52 14 38 14 24 C14 16 22 10 32 14 C42 10 50 16 50 24 C50 38 32 52 32 52Z' fill='%234caf50'/><path d='M32 52 L32 24' stroke='%23c8a84b' stroke-width='2.5' stroke-linecap='round'/><path d='M32 36 C32 36 24 30 20 24' stroke='%23c8a84b' stroke-width='2' stroke-linecap='round' fill='none'/><path d='M32 30 C32 30 40 26 44 20' stroke='%23c8a84b' stroke-width='2' stroke-linecap='round' fill='none'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/damak.css" />
+  <style>
+    /* ── INSIGHTS PAGE ── */
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem; max-width: var(--max-w); margin-inline: auto;
+    }
+    .article-card {
+      background: #fff; border-radius: var(--radius);
+      overflow: hidden; border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm); display: flex; flex-direction: column;
+      transition: box-shadow .25s, transform .25s;
+    }
+    .article-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+
+    .article-thumb {
+      height: 160px;
+      position: relative; overflow: hidden;
+      display: flex; align-items: flex-end; padding: 1.2rem;
+    }
+    .article-thumb-1 { background: linear-gradient(135deg, #1a4a1f 0%, #3d8a40 100%); }
+    .article-thumb-2 { background: linear-gradient(135deg, #2d4a1a 0%, #7a9a40 100%); }
+    .article-thumb-3 { background: linear-gradient(135deg, #1a3a4a 0%, #2d7a6a 100%); }
+    .article-thumb-4 { background: linear-gradient(135deg, #4a2a1a 0%, #8a6a30 100%); }
+    .article-thumb-5 { background: linear-gradient(135deg, #3a1a4a 0%, #6a3a7a 60%, #2d7a35 100%); }
+    .article-thumb-6 { background: linear-gradient(135deg, #1a4a3a 0%, #2d7a5a 100%); }
+
+    .article-thumb .thumb-icon {
+      font-size: 3.5rem; position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%,-50%); opacity: .35;
+    }
+    .article-cat {
+      display: inline-block; position: relative; z-index: 1;
+      background: rgba(200,168,75,.25); border: 1px solid rgba(200,168,75,.4);
+      color: var(--gold-light); font-size: .7rem; font-weight: 700;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      padding: .22rem .8rem; border-radius: 2rem;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .article-body { padding: 1.6rem; flex: 1; }
+    .article-meta {
+      display: flex; align-items: center; gap: .8rem;
+      margin-bottom: .8rem; font-size: .75rem; color: var(--muted);
+      font-family: 'Inter', sans-serif;
+    }
+    .article-meta .dot { font-size: .4rem; }
+    .article-body h2 {
+      font-size: 1.15rem; color: var(--green-dark);
+      margin-bottom: .7rem; line-height: 1.35;
+    }
+    .article-body p { font-size: .9rem; color: var(--muted); line-height: 1.7; }
+    .article-foot {
+      padding: 0 1.6rem 1.6rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .article-foot a {
+      font-size: .84rem; font-weight: 700; color: var(--green-mid);
+      text-decoration: none;
+    }
+    .article-foot a:hover { color: var(--green-dark); }
+    .read-time { font-size: .78rem; color: var(--muted); }
+
+    /* Topic tags */
+    .topic-filter {
+      display: flex; gap: .6rem; flex-wrap: wrap;
+      justify-content: center; margin-bottom: 3rem;
+    }
+    .topic-tag {
+      font-size: .8rem; font-weight: 600; padding: .4rem 1rem;
+      border-radius: 2rem; border: 1.5px solid var(--border);
+      background: #fff; color: var(--muted); cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: background .2s, color .2s, border-color .2s;
+    }
+    .topic-tag:hover { background: var(--green-pale); border-color: var(--green-light); color: var(--green-dark); }
+
+    /* Featured article */
+    .featured-article {
+      display: grid; grid-template-columns: 1fr 1.2fr; gap: 0;
+      max-width: var(--max-w); margin-inline: auto;
+      border-radius: var(--radius); overflow: hidden;
+      border: 1px solid var(--border); box-shadow: var(--shadow-md);
+      margin-bottom: 4rem;
+    }
+    .featured-thumb {
+      background: linear-gradient(135deg, #0d2e10 0%, var(--green-dark) 40%, var(--green-mid) 100%);
+      min-height: 300px; padding: 3rem;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      position: relative; overflow: hidden;
+    }
+    .featured-thumb::before {
+      content: '🌱'; font-size: 8rem; opacity: .15;
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+    }
+    .featured-label {
+      display: inline-block; background: var(--gold); color: var(--green-dark);
+      font-size: .7rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;
+      padding: .25rem .8rem; border-radius: 2rem; margin-bottom: .8rem;
+      font-family: 'Inter', sans-serif; position: relative;
+    }
+    .featured-thumb h2 {
+      color: #fff; font-size: 1.6rem; position: relative; line-height: 1.25;
+    }
+    .featured-body { padding: 2.5rem; background: #fff; }
+    .featured-body p { color: var(--muted); line-height: 1.75; margin-bottom: 1.2rem; }
+    .featured-body p:last-of-type { margin-bottom: 1.8rem; }
+
+    @media (max-width: 760px) {
+      .featured-article { grid-template-columns: 1fr; }
+      .featured-thumb { min-height: 200px; }
+      .articles-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">DAMAK<sup>®</sup></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="sustainability.html">Sustainability</a></li>
+    <li><a href="insights.html" class="active">Insights</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="lang-toggle">EN | عر</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> › <span>Insights</span></div>
+  <h1>Agricultural <em>Insights</em></h1>
+  <p>Practical agronomic knowledge from the DAMAK field team — written for Egyptian growing conditions, crop calendars, and the real challenges farmers face in the field.</p>
+</div>
+
+<section class="section section-cream">
+  <div class="container">
+
+    <!-- Topic filter (decorative — full filtering is a future feature) -->
+    <div class="topic-filter reveal">
+      <span class="topic-tag">All Topics</span>
+      <span class="topic-tag">Soil Management</span>
+      <span class="topic-tag">Plant Growth Regulators</span>
+      <span class="topic-tag">Crop Nutrition</span>
+      <span class="topic-tag">Irrigation</span>
+      <span class="topic-tag">Pest & Disease</span>
+      <span class="topic-tag">Harvest & Storage</span>
+    </div>
+
+    <!-- Featured Article -->
+    <!-- NOTE: Full article pages are a future build. "Read more" links point to this page
+         for now and will 404 gracefully until individual article pages are created. -->
+    <div class="featured-article reveal">
+      <div class="featured-thumb">
+        <div class="featured-label">Featured Article</div>
+        <h2>Preparing Your Soil Before the Spring Growth Phase</h2>
+      </div>
+      <div class="featured-body">
+        <div class="article-meta"><span>Soil Management</span><span class="dot">●</span><span>8 min read</span><span class="dot">●</span><span>DAMAK Agronomy Team</span></div>
+        <p>Soil structure, drainage, and organic matter levels at planting time set the ceiling for everything else that follows in a growing season. No amount of well-timed fertiliser or growth regulator application will fully compensate for a poorly prepared seedbed — yet soil preparation is the step that most small-scale farmers compress or skip entirely when they're under time or budget pressure.</p>
+        <p>This article outlines the key parameters to assess before your spring crops go in — and the practical, low-cost steps you can take to address deficiencies before they affect your yield potential.</p>
+        <a href="insights.html" class="btn btn-secondary btn-sm">Read Full Article →</a>
+        <!-- PLACEHOLDER: link to /articles/soil-preparation-spring.html once full article pages are built -->
+      </div>
+    </div>
+
+    <!-- Articles Grid -->
+    <div class="articles-grid">
+
+      <div class="article-card reveal d1">
+        <div class="article-thumb article-thumb-2"><div class="thumb-icon">🌿</div><span class="article-cat">Plant Science</span></div>
+        <div class="article-body">
+          <div class="article-meta"><span>Plant Science</span><span class="dot">●</span><span>6 min read</span></div>
+          <h2>Understanding Plant Growth Regulators: A Farmer's Guide</h2>
+          <p>PGRs are among the most powerful tools available to modern growers — but they're also among the most misunderstood. Used correctly, they can improve fruit set, prevent lodging, accelerate rooting, and extend shelf life. Used incorrectly, they can stress the plant or produce no measurable effect. We explain the basics: what PGRs are, how they work at the cellular level, and what to expect at each growth stage.</p>
+        </div>
+        <div class="article-foot">
+          <!-- PLACEHOLDER: link to full article page once built -->
+          <a href="insights.html">Read more →</a>
+          <span class="read-time">6 min read</span>
+        </div>
+      </div>
+
+      <div class="article-card reveal d2">
+        <div class="article-thumb article-thumb-3"><div class="thumb-icon">💧</div><span class="article-cat">Crop Nutrition</span></div>
+        <div class="article-body">
+          <div class="article-meta"><span>Crop Nutrition</span><span class="dot">●</span><span>7 min read</span></div>
+          <h2>Choosing the Right Fertilizer Programme for Your Crop</h2>
+          <p>There is no universal fertilizer schedule — yet most agricultural suppliers provide exactly that: a generic calendar printed on a product label that ignores your soil baseline, water quality, crop variety, and previous-season residues. This article explains how to build a fertilizer programme that actually reflects what your crop needs, not what a product brochure says it needs.</p>
+        </div>
+        <div class="article-foot">
+          <a href="insights.html">Read more →</a>
+          <span class="read-time">7 min read</span>
+        </div>
+      </div>
+
+      <div class="article-card reveal d3">
+        <div class="article-thumb article-thumb-4"><div class="thumb-icon">☀️</div><span class="article-cat">Stress Management</span></div>
+        <div class="article-body">
+          <div class="article-meta"><span>Stress Management</span><span class="dot">●</span><span>5 min read</span></div>
+          <h2>Managing Heat Stress in Summer Crops: What Actually Works</h2>
+          <p>Egypt's summer temperatures push many crops beyond their optimal thermal range during the critical flowering and fruit-set period. Heat stress reduces pollen viability, accelerates respiration, and depletes the sugars available for fruit development. This article covers the practical management options available — from application timing adjustments to biostimulant interventions that can improve plant resilience during heatwave periods.</p>
+        </div>
+        <div class="article-foot">
+          <a href="insights.html">Read more →</a>
+          <span class="read-time">5 min read</span>
+        </div>
+      </div>
+
+      <div class="article-card reveal d1">
+        <div class="article-thumb article-thumb-5"><div class="thumb-icon">🌊</div><span class="article-cat">Irrigation</span></div>
+        <div class="article-body">
+          <div class="article-meta"><span>Irrigation</span><span class="dot">●</span><span>9 min read</span></div>
+          <h2>Drip Irrigation and Root Development: Getting the Most from Your System</h2>
+          <p>Drip irrigation improves water use efficiency dramatically — but it also concentrates root activity in a much smaller soil volume than flood irrigation, which has implications for how nutrients and plant growth regulators behave in the root zone. This article explains how root architecture differs under drip vs. flood systems, and what agronomic adjustments deliver the best results in a drip-irrigated environment.</p>
+        </div>
+        <div class="article-foot">
+          <a href="insights.html">Read more →</a>
+          <span class="read-time">9 min read</span>
+        </div>
+      </div>
+
+      <div class="article-card reveal d2">
+        <div class="article-thumb article-thumb-6"><div class="thumb-icon">🌾</div><span class="article-cat">Harvest & Storage</span></div>
+        <div class="article-body">
+          <div class="article-meta"><span>Harvest & Storage</span><span class="dot">●</span><span>5 min read</span></div>
+          <h2>Post-Harvest Quality: Why It Starts Before You Harvest</h2>
+          <p>Post-harvest quality — shelf life, appearance, sugar content, firmness — is largely determined by what happens in the two to three weeks before harvest, not after it. Calcium levels, potassium balance, and cell-wall integrity at harvest time are all influenced by decisions made during the growth phase. This article explores the agronomic levers that translate directly into better marketable quality at the packhouse.</p>
+        </div>
+        <div class="article-foot">
+          <a href="insights.html">Read more →</a>
+          <span class="read-time">5 min read</span>
+        </div>
+      </div>
+
+      <div class="article-card reveal d3">
+        <div class="article-thumb article-thumb-1"><div class="thumb-icon">🏜️</div><span class="article-cat">Land & Soil</span></div>
+        <div class="article-body">
+          <div class="article-meta"><span>Land & Soil</span><span class="dot">●</span><span>8 min read</span></div>
+          <h2>Reclaiming Desert Soil: The First Three Years</h2>
+          <p>Converting desert or heavily degraded land into productive agricultural soil is a multi-year process — not a one-season project. The first three years determine whether the investment holds. This article walks through the soil amendment, cover cropping, organic matter addition, and drainage strategies that give reclaimed land the best chance of sustaining commercially viable yields over the long term.</p>
+        </div>
+        <div class="article-foot">
+          <a href="insights.html">Read more →</a>
+          <span class="read-time">8 min read</span>
+        </div>
+      </div>
+
+    </div><!-- /articles-grid -->
+
+    <!-- More articles CTA -->
+    <div style="text-align:center; margin-top:3rem" class="reveal">
+      <!-- PLACEHOLDER: as more articles are written and published, update this section
+           with pagination or a "load more" link. Each article should eventually have
+           its own page at /articles/article-slug.html -->
+      <p style="color:var(--muted); margin-bottom:1rem;">More articles are published regularly by the DAMAK agronomy team.</p>
+      <a href="contact.html" class="btn btn-outline-dark btn-sm">Get Notified of New Articles</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- NEWSLETTER / EXPERT CONSULTATION CTA -->
+<section class="section section-dark">
+  <div class="container" style="max-width:680px; text-align:center">
+    <div class="section-title on-dark reveal">
+      <h2>Have a Specific Agronomic Question?</h2>
+      <div class="accent-line"></div>
+      <p>These articles cover general principles. For advice specific to your farm, crop, and conditions — talk directly to a DAMAK agronomist.</p>
+    </div>
+    <div class="reveal d2">
+      <a href="contact.html" class="btn btn-primary">Ask an Agronomist</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo">DAMAK<sup>®</sup></span>
+      <p>Advanced plant growth solutions and end-to-end agricultural development for Egypt's farming communities — since 2011.</p>
+      <span class="footer-tagline">Growing Egypt's Future</span>
+    </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <ul>
+        <li><a href="products.html#power-contanol">Power Contanol</a></li>
+        <li><a href="products.html#macovit-drw">Macovit DRW</a></li>
+        <li><a href="products.html#sinolide-one">Sinolide One</a></li>
+        <li><a href="products.html#trimax">Trimax</a></li>
+        <li><a href="products.html#damak-indole">Damak Indole</a></li>
+        <li><a href="products.html">View All →</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About DAMAK</a></li>
+        <li><a href="about.html#timeline">Our History</a></li>
+        <li><a href="about.html#team">Leadership</a></li>
+        <li><a href="sustainability.html">Sustainability</a></li>
+        <li><a href="insights.html">Insights</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="contact.html">Get in Touch</a></li>
+        <li><a href="contact.html#distributors">Find a Distributor</a></li>
+        <li><a href="mailto:amr12elabd@gmail.com">amr12elabd@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="copy">&copy; 2026 <em>DAMAK</em> Agricultural Development. All rights reserved.</span>
+    <div class="links"><a href="sustainability.html">Sustainability</a><a href="contact.html">Contact</a></div>
+  </div>
+</footer>
+
+<script src="assets/damak.js"></script>
+</body>
+</html>
