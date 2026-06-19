@@ -39,8 +39,8 @@
       if (val !== null && val !== '') el.textContent = val;
     });
 
-    /* update toggle button label */
-    document.querySelectorAll('.lang-toggle').forEach(function (btn) {
+    /* update all toggle buttons (nav-right + mobile menu) */
+    document.querySelectorAll('.lang-toggle, .lang-toggle-menu').forEach(function (btn) {
       btn.textContent = isAr ? 'EN' : 'عربي';
       btn.setAttribute('aria-label', isAr ? 'Switch to English' : 'التبديل إلى العربية');
     });
@@ -64,7 +64,7 @@
 
     applyLanguage(saved);
 
-    document.querySelectorAll('.lang-toggle').forEach(function (btn) {
+    document.querySelectorAll('.lang-toggle, .lang-toggle-menu').forEach(function (btn) {
       btn.addEventListener('click', toggleLang);
     });
   });

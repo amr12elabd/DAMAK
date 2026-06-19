@@ -54,7 +54,11 @@
     });
   }
 
-  /* ── Lang toggle: handled by translations.js — no alert here ── */
+  /* ── Lang toggle: handled by translations.js — no alert here ──
+     The .lang-toggle-menu buttons inside the mobile nav are wired
+     by translations.js via the querySelectorAll('.lang-toggle') call,
+     which matches both .lang-toggle and .lang-toggle-menu since they
+     share the class. ── */
 
   /* ── Smooth counter animation (stats) ── */
   const counters = document.querySelectorAll('.count-up');
