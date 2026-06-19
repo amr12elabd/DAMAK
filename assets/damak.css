@@ -86,8 +86,11 @@ nav {
   display: flex; align-items: center;
 }
 .nav-logo-img {
-  height: 42px; width: auto; object-fit: contain;
-  filter: brightness(0) invert(1);
+  height: 44px; width: auto; object-fit: contain;
+  background: #fff;
+  border-radius: 8px;
+  padding: 4px 8px;
+  display: block;
 }
 .nav-logo-text {
   font-family: 'Fraunces', serif;
@@ -296,8 +299,10 @@ footer {
   border-bottom: 1px solid rgba(255,255,255,.05);
 }
 .footer-logo-img {
-  height: 44px; width: auto; object-fit: contain;
-  filter: brightness(0) invert(1); opacity: .85;
+  height: 52px; width: auto; object-fit: contain;
+  background: rgba(255,255,255,.92);
+  border-radius: 8px;
+  padding: 4px 10px;
   margin-bottom: .8rem; display: block;
 }
 .footer-logo-text {
