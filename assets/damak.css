@@ -38,7 +38,15 @@ body {
   line-height: 1.65;
   overflow-x: hidden;
 }
+body.lang-ar {
+  font-family: 'Cairo', 'Segoe UI', sans-serif;
+  line-height: 1.75;
+}
 h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; line-height: 1.15; }
+body.lang-ar h1,
+body.lang-ar h2,
+body.lang-ar h3,
+body.lang-ar h4 { font-family: 'Cairo', sans-serif; line-height: 1.25; }
 
 /* ── SCROLL ANIMATIONS ── */
 .reveal {
@@ -74,12 +82,19 @@ nav {
   gap: 1.5rem;
 }
 .nav-logo {
+  text-decoration: none; flex-shrink: 0;
+  display: flex; align-items: center;
+}
+.nav-logo-img {
+  height: 42px; width: auto; object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+.nav-logo-text {
   font-family: 'Fraunces', serif;
   font-size: 1.65rem; font-weight: 900; letter-spacing: 3px;
-  color: var(--gold); text-decoration: none;
-  flex-shrink: 0;
+  color: var(--gold);
 }
-.nav-logo sup {
+.nav-logo-text sup {
   font-size: .42em; vertical-align: super; letter-spacing: 1px;
   color: var(--gold-light); font-family: 'Inter', sans-serif; font-weight: 600;
 }
@@ -280,11 +295,16 @@ footer {
   padding: 4rem clamp(1.2rem, 6vw, 4rem) 2.5rem;
   border-bottom: 1px solid rgba(255,255,255,.05);
 }
-.footer-brand .logo {
+.footer-logo-img {
+  height: 44px; width: auto; object-fit: contain;
+  filter: brightness(0) invert(1); opacity: .85;
+  margin-bottom: .8rem; display: block;
+}
+.footer-logo-text {
   font-family: 'Fraunces', serif; font-size: 1.55rem; font-weight: 900;
   color: var(--gold); letter-spacing: 2.5px; display: block; margin-bottom: .8rem;
 }
-.footer-brand .logo sup {
+.footer-logo-text sup {
   font-size: .42em; vertical-align: super; font-family: 'Inter', sans-serif;
   font-weight: 600; color: var(--gold-light); letter-spacing: 1px;
 }
@@ -343,27 +363,175 @@ footer {
 .form-submit:hover { background: var(--green-mid); transform: translateY(-1px); }
 .form-note { font-size: .74rem; color: var(--muted); text-align: center; margin-top: .7rem; }
 
-/* ── PARTNER STRIP ── */
+/* ── PARTNER STRIP (text banner) ── */
 .partner-strip {
-  background: var(--cream-dark);
-  padding: 2.5rem clamp(1.2rem, 6vw, 4rem);
+  background: var(--green-dark);
+  padding: 2rem clamp(1.2rem, 6vw, 4rem);
   text-align: center;
 }
-.partner-strip p {
-  font-size: .8rem; color: var(--muted); letter-spacing: 2px;
-  text-transform: uppercase; font-weight: 600; margin-bottom: 1.5rem;
+.partner-strip-text {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  color: rgba(255,255,255,.75);
+  font-style: italic; letter-spacing: .3px;
 }
-.partner-logos {
+.partner-strip-text em { color: var(--gold); font-style: normal; }
+
+/* ── PRODUCT CARDS (JS-rendered) ── */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.6rem;
+}
+.product-card {
+  background: #fff; border-radius: var(--radius);
+  border: 1px solid var(--border); overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex; flex-direction: column;
+  transition: box-shadow .25s, transform .25s;
+}
+.product-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+.product-card-img {
+  height: 180px; position: relative; overflow: hidden;
+  background: linear-gradient(135deg, var(--green-dark) 0%, #2a6030 60%, var(--green-mid) 100%);
   display: flex; align-items: center; justify-content: center;
-  gap: 2rem; flex-wrap: wrap;
 }
-.partner-logo-box {
-  width: 130px; height: 52px;
-  background: #fff; border: 1px solid var(--border);
-  border-radius: 8px;
+.product-card-img img {
+  width: 100%; height: 100%; object-fit: contain; padding: .8rem;
+}
+.product-card-img .product-placeholder-name {
+  font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 900;
+  color: rgba(255,255,255,.9); text-align: center; padding: 1rem;
+  line-height: 1.2;
+}
+.product-card-body { padding: 1.4rem; flex: 1; display: flex; flex-direction: column; gap: .6rem; }
+.product-cat-badge {
+  display: inline-block; font-size: .68rem; font-weight: 700;
+  letter-spacing: 1.2px; text-transform: uppercase;
+  font-family: 'Inter', sans-serif;
+  padding: .2rem .75rem; border-radius: 2rem; margin-bottom: .2rem;
+  background: var(--green-pale); color: var(--green-dark);
+  border: 1px solid rgba(26,74,31,.15);
+}
+.product-cat-badge.cat-pgr        { background: #e8f5e9; color: #1a4a1f; border-color: #a5d6a7; }
+.product-cat-badge.cat-soil       { background: #fff8e1; color: #5d4037; border-color: #ffcc80; }
+.product-cat-badge.cat-micro      { background: #e3f2fd; color: #0d47a1; border-color: #90caf9; }
+.product-cat-badge.cat-biostim    { background: #f3e5f5; color: #4a148c; border-color: #ce93d8; }
+.product-cat-badge.cat-dormancy   { background: #e0f2f1; color: #00695c; border-color: #80cbc4; }
+.product-cat-badge.cat-fertilizer { background: #fce4ec; color: #880e4f; border-color: #f48fb1; }
+.product-cat-badge.cat-pesticide  { background: #fbe9e7; color: #bf360c; border-color: #ffab91; }
+.product-card-name { font-size: 1.1rem; color: var(--green-dark); font-weight: 700; font-family: 'Fraunces', serif; }
+.product-card-desc { font-size: .87rem; color: var(--muted); line-height: 1.65; flex: 1; }
+.product-card-comp {
+  font-size: .78rem; color: #666;
+  background: var(--cream); border-radius: 6px;
+  padding: .6rem .8rem; line-height: 1.55;
+}
+.product-card-comp strong { color: var(--green-dark); }
+.product-card-form {
+  font-size: .75rem; color: var(--muted); font-weight: 600;
+  display: flex; align-items: center; gap: .35rem;
+}
+.product-card-form::before { content: '⬡'; font-size: .7rem; color: var(--gold); }
+.product-card-foot { padding: 0 1.4rem 1.3rem; }
+.product-card-foot a {
+  display: block; text-align: center; padding: .65rem 1rem;
+  background: var(--green-dark); color: #fff;
+  border-radius: 2rem; font-size: .83rem; font-weight: 700;
+  text-decoration: none; transition: background .2s;
+}
+.product-card-foot a:hover { background: var(--green-mid); }
+.product-no-results {
+  text-align: center; padding: 4rem 2rem; color: var(--muted);
+  grid-column: 1 / -1; font-size: 1rem;
+}
+
+/* ── FILTER BAR ── */
+.filter-bar {
+  display: flex; gap: .6rem; flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+.filter-btn {
+  padding: .5rem 1.2rem; border-radius: 2rem; cursor: pointer;
+  font-size: .82rem; font-weight: 600; font-family: 'Inter', sans-serif;
+  border: 1.5px solid var(--border);
+  background: #fff; color: var(--muted);
+  transition: all .2s;
+}
+.filter-btn:hover { border-color: var(--green-mid); color: var(--green-dark); }
+.filter-btn.active {
+  background: var(--green-dark); color: #fff; border-color: var(--green-dark);
+}
+
+/* ── TEAM GALLERY ── */
+.team-gallery {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem; max-width: var(--max-w); margin-inline: auto;
+}
+.gallery-card {
+  border-radius: var(--radius); overflow: hidden;
+  box-shadow: var(--shadow-sm); border: 1px solid var(--border);
+  transition: box-shadow .25s, transform .25s;
+}
+.gallery-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+.gallery-card img {
+  width: 100%; height: 220px; object-fit: cover; display: block;
+}
+.gallery-card-cap {
+  padding: .9rem 1.1rem;
+  background: #fff; font-size: .83rem; color: var(--muted);
+  font-style: italic;
+}
+
+/* ── CEO CARD ── */
+.ceo-section {
+  display: grid; grid-template-columns: 340px 1fr;
+  gap: 3rem; max-width: var(--max-w); margin-inline: auto;
+  align-items: start;
+}
+.ceo-photo-wrap {
+  border-radius: var(--radius); overflow: hidden;
+  box-shadow: var(--shadow-md); border: 1px solid var(--border);
+}
+.ceo-photo-wrap img {
+  width: 100%; height: 380px; object-fit: cover; object-position: top center; display: block;
+}
+.ceo-photo-fallback {
+  width: 100%; height: 380px;
+  background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
   display: flex; align-items: center; justify-content: center;
-  font-size: .72rem; color: #aaa; font-weight: 600; letter-spacing: .5px;
+  font-size: 5rem; color: rgba(255,255,255,.3);
 }
+.ceo-info { padding: .5rem 0; }
+.ceo-info h3 { font-size: 2rem; color: var(--green-dark); margin-bottom: .3rem; }
+.ceo-info .ceo-title {
+  font-size: .88rem; font-weight: 700; color: var(--gold);
+  letter-spacing: 1px; text-transform: uppercase;
+  font-family: 'Inter', sans-serif; margin-bottom: 1.2rem;
+  display: block;
+}
+.ceo-info p { color: var(--muted); margin-bottom: .9rem; }
+.ceo-quote {
+  border-left: 3px solid var(--gold);
+  padding: .8rem 1.2rem; margin-top: 1.2rem;
+  background: var(--cream); border-radius: 0 8px 8px 0;
+  font-style: italic; color: var(--green-dark); font-size: .95rem;
+}
+html[dir="rtl"] .ceo-quote { border-left: none; border-right: 3px solid var(--gold); border-radius: 8px 0 0 8px; }
+
+/* ── RTL OVERRIDES ── */
+html[dir="rtl"] .about-pill { border-left: none; border-right: 3px solid var(--green-light); }
+html[dir="rtl"] .value-card { border-top: 4px solid var(--green-light); border-left: none; }
+html[dir="rtl"] .tl-item:nth-child(even) { flex-direction: row; }
+html[dir="rtl"] .tl-item:nth-child(odd)  { flex-direction: row-reverse; }
+html[dir="rtl"] .tl-item:nth-child(even) .tl-content { text-align: left; }
+html[dir="rtl"] .tl-item:nth-child(odd)  .tl-content { text-align: right; }
+html[dir="rtl"] .nav-links .nav-cta { margin-left: 0; margin-right: .5rem; }
+html[dir="rtl"] .filter-bar { direction: rtl; }
+html[dir="rtl"] .product-card-comp { direction: ltr; }
+html[dir="rtl"] .footer-inner { direction: rtl; }
+html[dir="rtl"] .stat-item { border-right: none; border-left: 1px solid rgba(255,255,255,.08); }
+html[dir="rtl"] .stat-item:last-child { border-left: none; }
 
 /* ══════════════════════════════
    RESPONSIVE

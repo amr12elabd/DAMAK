@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,7 +12,7 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%231a4a1f'/><path d='M32 52 C32 52 14 38 14 24 C14 16 22 10 32 14 C42 10 50 16 50 24 C50 38 32 52 32 52Z' fill='%234caf50'/><path d='M32 52 L32 24' stroke='%23c8a84b' stroke-width='2.5' stroke-linecap='round'/><path d='M32 36 C32 36 24 30 20 24' stroke='%23c8a84b' stroke-width='2' stroke-linecap='round' fill='none'/><path d='M32 30 C32 30 40 26 44 20' stroke='%23c8a84b' stroke-width='2' stroke-linecap='round' fill='none'/></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/damak.css" />
   <style>
     /* ── CONTACT PAGE ── */
@@ -142,17 +142,20 @@
 <body>
 
 <nav>
-  <a class="nav-logo" href="index.html">DAMAK<sup>®</sup></a>
+  <a class="nav-logo" href="index.html">
+    <img src="assets/images/logo.png" alt="DAMAK For Agricultural Development" class="nav-logo-img"
+         onerror="this.outerHTML='<span class=nav-logo-text>DAMAK<sup>®</sup></span>'">
+  </a>
   <ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="products.html">Products</a></li>
-    <li><a href="sustainability.html">Sustainability</a></li>
-    <li><a href="insights.html">Insights</a></li>
-    <li><a href="contact.html" class="nav-cta active">Contact</a></li>
+    <li><a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+    <li><a href="about.html" data-en="About" data-ar="من نحن">About</a></li>
+    <li><a href="products.html" data-en="Products" data-ar="المنتجات">Products</a></li>
+    <li><a href="sustainability.html" data-en="Sustainability" data-ar="الاستدامة">Sustainability</a></li>
+    <li><a href="insights.html" data-en="Insights" data-ar="مقالات">Insights</a></li>
+    <li><a href="contact.html" class="nav-cta active" data-en="Contact" data-ar="تواصل معنا">Contact</a></li>
   </ul>
   <div class="nav-right">
-    <button class="lang-toggle">EN | عر</button>
+    <button class="lang-toggle" aria-label="Switch language">عربي</button>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -176,19 +179,24 @@
 
       <div class="contact-detail">
         <div class="ci">📧</div>
-        <div><h4>Email</h4><a href="mailto:amr12elabd@gmail.com">amr12elabd@gmail.com</a></div>
+        <div><h4 data-en="Email" data-ar="البريد الإلكتروني">Email</h4><a href="mailto:info@damakagro.com">info@damakagro.com</a></div>
       </div>
 
       <div class="contact-detail">
-        <!-- PLACEHOLDER: add phone number once confirmed by the family -->
         <div class="ci">📞</div>
-        <div><h4>Phone</h4><p>[Phone number — confirm with family before publishing]</p></div>
+        <div>
+          <h4 data-en="Phone" data-ar="الهاتف">Phone</h4>
+          <a href="tel:+20342638 87">+2 03 42 638 87</a><br/>
+          <a href="tel:+201066654580" data-en="Mobile: +2 010 666 54 580" data-ar="موبايل: 010 666 54 580 +2">Mobile: +2 010 666 54 580</a>
+        </div>
       </div>
 
       <div class="contact-detail">
-        <!-- PLACEHOLDER: add full mailing/registered address once confirmed -->
         <div class="ci">📍</div>
-        <div><h4>Address</h4><p>Egypt — serving 8 governorates nationwide.<br/>[Full registered address — confirm with family]</p></div>
+        <div>
+          <h4 data-en="Address" data-ar="العنوان">Address</h4>
+          <p data-en="Tower 7 GreenTowers,<br/>Smouha, Alexandria, Egypt" data-ar="برج 7 جرين تاورز،<br/>سموحة، الإسكندرية، مصر">Tower 7 GreenTowers,<br/>Smouha, Alexandria, Egypt</p>
+        </div>
       </div>
 
       <div class="contact-detail">
@@ -378,7 +386,8 @@
       <ul>
         <li><a href="contact.html">Get in Touch</a></li>
         <li><a href="#distributors">Find a Distributor</a></li>
-        <li><a href="mailto:amr12elabd@gmail.com">amr12elabd@gmail.com</a></li>
+        <li><a href="mailto:info@damakagro.com">info@damakagro.com</a></li>
+        <li><a href="tel:+20342638 87">+2 03 42 638 87</a></li>
       </ul>
     </div>
   </div>
@@ -389,6 +398,7 @@
 </footer>
 
 <script src="assets/damak.js"></script>
+<script src="assets/js/translations.js"></script>
 <script>
   /* Inquiry type selector */
   document.querySelectorAll('.inquiry-opt').forEach(btn => {

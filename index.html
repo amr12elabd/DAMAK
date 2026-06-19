@@ -1,31 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DAMAK – Agricultural Development & Plant Growth Solutions, Egypt</title>
-  <meta name="description" content="DAMAK provides advanced plant growth regulators, agronomic consulting, irrigation systems, and land reclamation services across Egypt. Trusted by farmers in 8 governorates." />
+  <meta name="description" content="DAMAK For Agricultural Development — advanced plant growth regulators, biostimulants, soil conditioners and agronomic services for Egyptian farmers. Based in Alexandria, Est. 2011." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://amr12elabd.github.io/DAMAK/" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://amr12elabd.github.io/DAMAK/" />
   <meta property="og:title" content="DAMAK – Agricultural Development & Plant Growth Solutions, Egypt" />
   <meta property="og:description" content="Advanced plant growth regulators and end-to-end agricultural development services for Egyptian farmers." />
-  <meta property="og:image" content="https://amr12elabd.github.io/DAMAK/assets/og-home.png" />
-  <meta property="og:locale" content="en_EG" />
+  <meta property="og:image" content="https://amr12elabd.github.io/DAMAK/assets/images/logo.png" />
+  <meta property="og:locale" content="ar_EG" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="DAMAK – Agricultural Development" />
-  <meta name="twitter:description" content="Advanced plant growth regulators and agro services across Egypt." />
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Organization","name":"DAMAK Agricultural Development","url":"https://amr12elabd.github.io/DAMAK/","description":"DAMAK provides plant growth regulators, agronomic consulting, irrigation and land reclamation across Egypt.","address":{"@type":"PostalAddress","addressCountry":"EG"},"contactPoint":{"@type":"ContactPoint","email":"amr12elabd@gmail.com","contactType":"customer support","availableLanguage":["Arabic","English"]},"areaServed":"EG","foundingDate":"2011","sameAs":["https://github.com/amr12elabd/DAMAK"]}
+  {"@context":"https://schema.org","@type":"Organization","name":"DAMAK For Agricultural Development","alternateName":"دماك للتنمية الزراعية","url":"https://amr12elabd.github.io/DAMAK/","description":"DAMAK provides plant growth regulators, biostimulants, soil conditioners, micronutrients, and pesticides for Egyptian farmers.","address":{"@type":"PostalAddress","streetAddress":"Tower 7 GreenTowers, Smouha","addressLocality":"Alexandria","addressCountry":"EG"},"telephone":"+20342638 87","email":"info@damakagro.com","foundingDate":"2011","sameAs":["https://www.facebook.com/DamakCompany","https://www.damakagro.com"]}
   </script>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%231a4a1f'/><path d='M32 52 C32 52 14 38 14 24 C14 16 22 10 32 14 C42 10 50 16 50 24 C50 38 32 52 32 52Z' fill='%234caf50'/><path d='M32 52 L32 24' stroke='%23c8a84b' stroke-width='2.5' stroke-linecap='round'/><path d='M32 36 C32 36 24 30 20 24' stroke='%23c8a84b' stroke-width='2' stroke-linecap='round' fill='none'/><path d='M32 30 C32 30 40 26 44 20' stroke='%23c8a84b' stroke-width='2' stroke-linecap='round' fill='none'/></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/damak.css" />
   <style>
-    /* ── HOME-SPECIFIC ── */
     .hero {
       min-height: 94vh;
       background:
@@ -80,8 +77,6 @@
       51%{transform-origin:bottom}
       100%{transform:scaleY(0);transform-origin:bottom}
     }
-
-    /* ── WHO WE ARE TEASER ── */
     .about-teaser { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; max-width: var(--max-w); margin-inline: auto; align-items: center; }
     .about-teaser-text h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); color: var(--green-dark); margin-bottom: 1rem; }
     .about-teaser-text p { color: var(--muted); margin-bottom: 1rem; }
@@ -91,7 +86,7 @@
       padding: .85rem 1.1rem; background: var(--green-pale);
       border-radius: 10px; border-left: 3px solid var(--green-light);
     }
-    .about-pill .ico { font-size: 1.3rem; }
+    .about-pill .ico { font-size: 1.3rem; flex-shrink: 0; }
     .about-pill p { font-size: .9rem; color: var(--text); margin: 0; }
     .about-visual {
       background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 100%);
@@ -111,65 +106,31 @@
       position: relative; z-index: 1;
     }
     .about-visual cite { display: block; margin-top: .6rem; font-size: .8rem; color: var(--gold-light); font-style: normal; font-family: 'Inter', sans-serif; }
-
-    /* ── FEATURED PRODUCTS ── */
+    body.lang-ar .about-visual blockquote { font-family: 'Cairo', sans-serif; font-style: normal; }
     .feat-products { max-width: var(--max-w); margin-inline: auto; }
-    .feat-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem; margin-bottom: 2.5rem;
-    }
-    .feat-card {
-      background: #fff; border-radius: var(--radius);
-      border: 1px solid var(--border); overflow: hidden;
-      box-shadow: var(--shadow-sm);
-      transition: box-shadow .25s, transform .25s;
-    }
+    .feat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem; }
+    .feat-card { background: #fff; border-radius: var(--radius); border: 1px solid var(--border); overflow: hidden; box-shadow: var(--shadow-sm); transition: box-shadow .25s, transform .25s; }
     .feat-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
-    .feat-card-top {
-      background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
-      padding: 1.4rem 1.6rem 1rem;
-    }
-    .feat-tag {
-      font-size: .68rem; font-weight: 700; letter-spacing: 1.5px;
-      text-transform: uppercase; color: var(--gold-light);
-      background: rgba(200,168,75,.2); padding: .2rem .7rem; border-radius: 2rem;
-      margin-bottom: .6rem; display: inline-block; font-family: 'Inter', sans-serif;
-    }
+    .feat-card-top { background: linear-gradient(135deg, var(--green-dark), var(--green-mid)); padding: 1.4rem 1.6rem 1rem; }
+    .feat-tag { font-size: .68rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold-light); background: rgba(200,168,75,.2); padding: .2rem .7rem; border-radius: 2rem; margin-bottom: .6rem; display: inline-block; font-family: 'Inter', sans-serif; }
     .feat-card-top h3 { color: #fff; font-size: 1.15rem; }
     .feat-card-body { padding: 1.2rem 1.6rem 1.4rem; }
     .feat-card-body p { font-size: .87rem; color: var(--muted); line-height: 1.6; }
     .feat-footer { display: flex; justify-content: flex-end; padding: 0 1.6rem 1.4rem; }
     .feat-footer a { font-size: .82rem; font-weight: 700; color: var(--green-mid); text-decoration: none; }
     .feat-footer a:hover { color: var(--green-dark); }
-
-    /* ── INSIGHTS TEASER ── */
-    .insights-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem; max-width: var(--max-w); margin-inline: auto;
-    }
-    .insight-card {
-      border-radius: var(--radius); overflow: hidden;
-      border: 1px solid var(--border);
-      display: flex; flex-direction: column;
-      transition: box-shadow .25s, transform .25s;
-    }
+    html[dir="rtl"] .feat-footer { justify-content: flex-start; }
+    .insights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: var(--max-w); margin-inline: auto; }
+    .insight-card { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); display: flex; flex-direction: column; transition: box-shadow .25s, transform .25s; }
     .insight-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
-    .insight-card-thumb {
-      height: 8px;
-      background: linear-gradient(to right, var(--green-dark), var(--green-light));
-    }
+    .insight-card-thumb { height: 8px; background: linear-gradient(to right, var(--green-dark), var(--green-light)); }
     .insight-card-body { padding: 1.5rem; flex: 1; }
-    .insight-label {
-      font-size: .7rem; font-weight: 700; letter-spacing: 1.5px;
-      text-transform: uppercase; color: var(--green-mid); margin-bottom: .6rem;
-      display: block; font-family: 'Inter', sans-serif;
-    }
+    .insight-label { font-size: .7rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-mid); margin-bottom: .6rem; display: block; font-family: 'Inter', sans-serif; }
     .insight-card-body h3 { font-size: 1.05rem; color: var(--green-dark); margin-bottom: .5rem; }
     .insight-card-body p { font-size: .87rem; color: var(--muted); line-height: 1.6; }
     .insight-card-foot { padding: 0 1.5rem 1.4rem; }
     .insight-card-foot a { font-size: .82rem; font-weight: 700; color: var(--green-mid); text-decoration: none; }
     .insight-card-foot a:hover { color: var(--green-dark); }
-
     @media (max-width: 760px) {
       .about-teaser { grid-template-columns: 1fr; gap: 2.5rem; }
       .hero-scroll { display: none; }
@@ -180,17 +141,20 @@
 
 <!-- ══ NAV ══ -->
 <nav>
-  <a class="nav-logo" href="index.html">DAMAK<sup>®</sup></a>
+  <a class="nav-logo" href="index.html">
+    <img src="assets/images/logo.png" alt="DAMAK For Agricultural Development" class="nav-logo-img"
+         onerror="this.outerHTML='<span class=nav-logo-text>DAMAK<sup>®</sup></span>'">
+  </a>
   <ul class="nav-links" id="navLinks">
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="products.html">Products</a></li>
-    <li><a href="sustainability.html">Sustainability</a></li>
-    <li><a href="insights.html">Insights</a></li>
-    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    <li><a href="index.html" class="active" data-en="Home" data-ar="الرئيسية">Home</a></li>
+    <li><a href="about.html" data-en="About" data-ar="من نحن">About</a></li>
+    <li><a href="products.html" data-en="Products" data-ar="المنتجات">Products</a></li>
+    <li><a href="sustainability.html" data-en="Sustainability" data-ar="الاستدامة">Sustainability</a></li>
+    <li><a href="insights.html" data-en="Insights" data-ar="مقالات">Insights</a></li>
+    <li><a href="contact.html" class="nav-cta" data-en="Contact" data-ar="تواصل معنا">Contact</a></li>
   </ul>
   <div class="nav-right">
-    <button class="lang-toggle" aria-label="Switch language">EN | عر</button>
+    <button class="lang-toggle" aria-label="Switch language">عربي</button>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -209,33 +173,33 @@
       <path d="M160 300C160 300 40 210 40 120C40 55 95 15 160 40C225 15 280 55 280 120C280 210 160 300 160 300Z" stroke="white" stroke-width="1" fill="none"/>
     </svg>
   </div>
-  <div class="hero-badge">Egypt's Agricultural Partner Since 2011</div>
-  <h1>Growing a <em>Sustainable</em><br/>Future for Egypt</h1>
-  <p>DAMAK provides advanced plant growth solutions and end-to-end agronomic services — empowering Egypt's farmers with the science and support to thrive.</p>
+  <div class="hero-badge" data-en="Egypt's Agricultural Partner Since 2011" data-ar="شريككم الزراعي في مصر منذ 2011">Egypt's Agricultural Partner Since 2011</div>
+  <h1 data-en="Growing a <em>Sustainable</em><br/>Future for Egypt" data-ar="نبني مستقبلاً <em>مستداماً</em><br/>لمصر الزراعية">Growing a <em>Sustainable</em><br/>Future for Egypt</h1>
+  <p data-en="DAMAK provides advanced plant growth solutions and end-to-end agronomic services — empowering Egypt's farmers with the science and support to thrive." data-ar="دماك تقدم حلولاً متقدمة لتنظيم نمو النبات وخدمات زراعية شاملة — لتمكين المزارع المصري بالعلم والدعم اللازمَين للنجاح.">DAMAK provides advanced plant growth solutions and end-to-end agronomic services — empowering Egypt's farmers with the science and support to thrive.</p>
   <div class="hero-actions">
-    <a href="products.html" class="btn btn-primary">Explore Our Products</a>
-    <a href="contact.html" class="btn btn-outline">Talk to an Agronomist</a>
+    <a href="products.html" class="btn btn-primary" data-en="Explore Our Products" data-ar="استكشف منتجاتنا">Explore Our Products</a>
+    <a href="contact.html" class="btn btn-outline" data-en="Talk to an Agronomist" data-ar="تحدث مع مهندس زراعي">Talk to an Agronomist</a>
   </div>
-  <div class="hero-scroll">Scroll</div>
+  <div class="hero-scroll" data-en="Scroll" data-ar="تمرير">Scroll</div>
 </section>
 
 <!-- ══ STATS ══ -->
 <div class="stats-bar">
   <div class="stat-item reveal d1">
-    <span class="stat-num count-up" data-target="50000" data-suffix="+">50,000+</span>
-    <span class="stat-label">Feddans Developed</span>
+    <span class="stat-num">2011</span>
+    <span class="stat-label" data-en="Founded" data-ar="سنة التأسيس">Founded</span>
   </div>
   <div class="stat-item reveal d2">
-    <span class="stat-num count-up" data-target="8">8</span>
-    <span class="stat-label">Products in Portfolio</span>
+    <span class="stat-num count-up" data-target="61">61</span>
+    <span class="stat-label" data-en="Products" data-ar="منتج في الكتالوج">Products</span>
   </div>
   <div class="stat-item reveal d3">
-    <span class="stat-num count-up" data-target="3000" data-suffix="+">3,000+</span>
-    <span class="stat-label">Farmers Supported</span>
+    <span class="stat-num count-up" data-target="15" data-suffix="+">15+</span>
+    <span class="stat-label" data-en="Years of Experience" data-ar="سنة خبرة">Years of Experience</span>
   </div>
   <div class="stat-item reveal d4">
-    <span class="stat-num count-up" data-target="15" data-suffix="+">15+</span>
-    <span class="stat-label">Years of Experience</span>
+    <span class="stat-num" data-en="Alexandria, Egypt" data-ar="الإسكندرية، مصر">Alexandria, Egypt</span>
+    <span class="stat-label" data-en="Headquarters" data-ar="المقر الرئيسي">Headquarters</span>
   </div>
 </div>
 
@@ -243,21 +207,21 @@
 <section class="section section-white">
   <div class="about-teaser">
     <div class="about-teaser-text reveal-left">
-      <h2>A Technical Partner,<br/>Not Just a Supplier</h2>
-      <p>Since 2011, DAMAK has worked alongside Egyptian farmers — not just selling products, but providing the agronomic expertise to use them correctly. Our team of agricultural engineers is active in the field every season.</p>
-      <p>We develop, import, and distribute a portfolio of plant growth regulators and biostimulants that are formulated for Egypt's unique climate, soil profile, and crop calendar.</p>
+      <h2 data-en="A Technical Partner,<br/>Not Just a Supplier" data-ar="شريك تقني،<br/>لا مجرد مورد">A Technical Partner,<br/>Not Just a Supplier</h2>
+      <p data-en="Since 2011, DAMAK has worked alongside Egyptian farmers — not just selling products, but providing the agronomic expertise to use them correctly. Our field team of agricultural engineers is active every season." data-ar="منذ 2011، عملت دماك جنباً إلى جنب مع المزارعين المصريين — لا نبيع منتجات فحسب، بل نُقدّم الخبرة الزراعية لاستخدامها بالشكل الصحيح. فريقنا من المهندسين الزراعيين حاضر في الحقل في كل موسم.">Since 2011, DAMAK has worked alongside Egyptian farmers — not just selling products, but providing the agronomic expertise to use them correctly. Our field team of agricultural engineers is active every season.</p>
+      <p data-en="We develop, import, and distribute a portfolio of 61 plant growth regulators, biostimulants, micronutrients, soil conditioners, and pesticides formulated for Egypt's unique climate and crop calendar." data-ar="نقوم بتطوير واستيراد وتوزيع 61 منتجاً من منظمات النمو والمحفزات الحيوية والعناصر الصغرى ومحسنات التربة والمبيدات — مُصمَّمة خصيصاً لمناخ مصر ودورتها الزراعية.">We develop, import, and distribute a portfolio of 61 plant growth regulators, biostimulants, micronutrients, soil conditioners, and pesticides formulated for Egypt's unique climate and crop calendar.</p>
       <div class="about-pillars">
-        <div class="about-pill"><span class="ico">🔬</span><p>Field agronomists active across 8 governorates</p></div>
-        <div class="about-pill"><span class="ico">🌾</span><p>Products optimised for Egyptian growing conditions</p></div>
-        <div class="about-pill"><span class="ico">📞</span><p>Technical support throughout the entire growing season</p></div>
+        <div class="about-pill"><span class="ico">🔬</span><p data-en="Field agronomists active across Egypt's governorates" data-ar="مهندسون زراعيون ميدانيون نشطون في محافظات مصر">Field agronomists active across Egypt's governorates</p></div>
+        <div class="about-pill"><span class="ico">🌾</span><p data-en="61 products optimised for Egyptian growing conditions" data-ar="61 منتجاً مُحسَّناً لظروف الزراعة المصرية">61 products optimised for Egyptian growing conditions</p></div>
+        <div class="about-pill"><span class="ico">📞</span><p data-en="Technical support throughout the entire growing season" data-ar="دعم تقني طوال موسم الزراعة بأكمله">Technical support throughout the entire growing season</p></div>
       </div>
       <br/>
-      <a href="about.html" class="btn btn-outline-dark btn-sm">Our Full Story →</a>
+      <a href="about.html" class="btn btn-outline-dark btn-sm" data-en="Our Full Story →" data-ar="← قصتنا الكاملة">Our Full Story →</a>
     </div>
     <div class="about-visual reveal-right">
       <blockquote>
-        "The goal has always been the same: give Egyptian farmers access to the same quality of agronomic science that global producers take for granted."
-        <cite>— DAMAK Agricultural Development</cite>
+        <span data-en='"The goal has always been the same: give Egyptian farmers access to the same quality of agronomic science that global producers take for granted."' data-ar='"هدفنا لم يتغير منذ اليوم الأول: أن نمنح المزارع المصري إمكانية الوصول إلى نفس جودة العلم الزراعي التي يأخذها المنتجون العالميون كأمر مسلّم به."'>"The goal has always been the same: give Egyptian farmers access to the same quality of agronomic science that global producers take for granted."</span>
+        <cite data-en="— Wafik El-Abd, CEO, DAMAK Agricultural Development" data-ar="— وفيق العبد، الرئيس التنفيذي، دماك للتنمية الزراعية">— Wafik El-Abd, CEO, DAMAK Agricultural Development</cite>
       </blockquote>
     </div>
   </div>
@@ -266,101 +230,96 @@
 <!-- ══ FEATURED PRODUCTS ══ -->
 <section class="section section-cream">
   <div class="section-title reveal">
-    <h2>Our Product Portfolio</h2>
+    <h2 data-en="Featured Products" data-ar="منتجات مختارة">Featured Products</h2>
     <div class="accent-line"></div>
-    <p>Eight specialised plant growth regulators and biostimulants — each addressing a distinct crop need across the growth cycle.</p>
+    <p data-en="A selection from our catalogue of 61 specialised plant growth solutions." data-ar="اختيار من كتالوجنا الذي يضم 61 حلاً متخصصاً لتنظيم نمو النبات.">A selection from our catalogue of 61 specialised plant growth solutions.</p>
   </div>
   <div class="feat-products">
     <div class="feat-grid">
       <div class="feat-card reveal d1">
-        <div class="feat-card-top"><div class="feat-tag">Growth Regulator</div><h3>Power Contanol</h3></div>
-        <div class="feat-card-body"><p>Optimises hormonal balance during critical vegetative and reproductive stages, strengthening stem structure and supporting recovery after abiotic stress.</p></div>
-        <div class="feat-footer"><a href="products.html#power-contanol">Learn more →</a></div>
+        <div class="feat-card-top"><div class="feat-tag" data-en="Growth Regulator" data-ar="منظم نمو">Growth Regulator</div><h3 data-en="Super Feneron" data-ar="سوبر فينيرون">Super Feneron</h3></div>
+        <div class="feat-card-body"><p data-en="#1 for fruit set and berry enlargement. CPPU (forchlorfenuron) delivers the strongest cytokinin sizing response for table grapes and kiwi." data-ar="رقم واحد في زيادة العقد والتضخيم. فوركلورفينيرون (CPPU) يُعطي أقوى استجابة سيتوكينين لتضخيم حبات العنب والكيوي.">#1 for fruit set and berry enlargement. CPPU (forchlorfenuron) delivers the strongest cytokinin sizing response for table grapes and kiwi.</p></div>
+        <div class="feat-footer"><a href="products.html#super-feneron" data-en="Learn more →" data-ar="← اعرف أكثر">Learn more →</a></div>
       </div>
       <div class="feat-card reveal d2">
-        <div class="feat-card-top"><div class="feat-tag">Biostimulant</div><h3>Macovit DRW</h3></div>
-        <div class="feat-card-body"><p>A water-soluble micronutrient and amino-acid complex that enhances foliar nutrient uptake and primes crops for peak photosynthetic output.</p></div>
-        <div class="feat-footer"><a href="products.html#macovit-drw">Learn more →</a></div>
+        <div class="feat-card-top"><div class="feat-tag" data-en="Biostimulant" data-ar="محفز النمو">Biostimulant</div><h3 data-en="Algamax Forte" data-ar="الجوماكس فورتي">Algamax Forte</h3></div>
+        <div class="feat-card-body"><p data-en="High-protein Ecklonia maxima seaweed extract rich in natural auxins, cytokinins, and protein hydrolysates — for maximum plant growth potential." data-ar="مستخلص طحالب بحرية (Ecklonia maxima) غني بالأوكسينات والسيتوكينينات وبروتين هيدروليزات الطبيعية لأقصى إمكانات نمو للنبات.">High-protein Ecklonia maxima seaweed extract rich in natural auxins, cytokinins, and protein hydrolysates — for maximum plant growth potential.</p></div>
+        <div class="feat-footer"><a href="products.html#algamax-forte" data-en="Learn more →" data-ar="← اعرف أكثر">Learn more →</a></div>
       </div>
       <div class="feat-card reveal d3">
-        <div class="feat-card-top"><div class="feat-tag">Flowering Enhancer</div><h3>Sinolide One</h3></div>
-        <div class="feat-card-body"><p>Synchronises and intensifies flowering initiation, improving pollen viability and reducing flower drop caused by temperature fluctuations.</p></div>
-        <div class="feat-footer"><a href="products.html#sinolide-one">Learn more →</a></div>
+        <div class="feat-card-top"><div class="feat-tag" data-en="Stress Resistance" data-ar="مقاومة الإجهاد">Stress Resistance</div><h3 data-en="Sinolide One" data-ar="سينولايد وان">Sinolide One</h3></div>
+        <div class="feat-card-body"><p data-en="Brassinolide formulation for increasing crop resistance to heat, salinity, frost, drought, and pesticide phytotoxicity. Also clears pesticide residues from fruit." data-ar="براسينولايد لزيادة مقاومة المحاصيل للحرارة والملوحة والصقيع والجفاف والتسمم بالمبيدات — والأسرع في تكسير متبقيات المبيدات في الثمار.">Brassinolide formulation for increasing crop resistance to heat, salinity, frost, drought, and pesticide phytotoxicity. Also clears pesticide residues from fruit.</p></div>
+        <div class="feat-footer"><a href="products.html#sinolide-one" data-en="Learn more →" data-ar="← اعرف أكثر">Learn more →</a></div>
       </div>
       <div class="feat-card reveal d4">
-        <div class="feat-card-top"><div class="feat-tag">Premium Root PGR</div><h3>Damak Indole</h3></div>
-        <div class="feat-card-body"><p>DAMAK's flagship auxin formulation — optimised for Egyptian soil conditions and water salinity, supporting deep rooting in long-season perennial crops.</p></div>
-        <div class="feat-footer"><a href="products.html#damak-indole">Learn more →</a></div>
+        <div class="feat-card-top"><div class="feat-tag" data-en="Iron Fertilizer" data-ar="سماد حديد">Iron Fertilizer</div><h3 data-en="Fero Pro" data-ar="فيرو برو">Fero Pro</h3></div>
+        <div class="feat-card-body"><p data-en="Superior soil-applied EDDHA iron chelate. The high ortho-ortho fraction ensures iron availability even in high-pH calcareous soils common across Egypt." data-ar="حديد EDDHA أرضي فائق الجودة. الجزء العالي أورثو-أورثو يضمن توافر الحديد حتى في التربة القلوية والجيرية المنتشرة في مصر.">Superior soil-applied EDDHA iron chelate. The high ortho-ortho fraction ensures iron availability even in high-pH calcareous soils common across Egypt.</p></div>
+        <div class="feat-footer"><a href="products.html#fero-pro" data-en="Learn more →" data-ar="← اعرف أكثر">Learn more →</a></div>
       </div>
     </div>
     <div style="text-align:center">
-      <a href="products.html" class="btn btn-secondary">View All 8 Products →</a>
+      <a href="products.html" class="btn btn-secondary" data-en="View All 61 Products →" data-ar="← عرض جميع المنتجات الـ 61">View All 61 Products →</a>
     </div>
   </div>
 </section>
 
-<!-- ══ PARTNER LOGO STRIP ══ -->
-<!-- PLACEHOLDER — replace placeholder boxes with real distributor/partner/certification logos
-     once permission to use them is confirmed with the relevant organisations. -->
+<!-- ══ PARTNER STRIP ══ -->
+<!-- PLACEHOLDER: Replace this text banner with real partner/supplier logos once
+     permission to use them is confirmed with the relevant organisations. -->
 <div class="partner-strip reveal">
-  <p>Distribution & Supply Partners</p>
-  <div class="partner-logos">
-    <div class="partner-logo-box">[Partner Logo]</div>
-    <div class="partner-logo-box">[Partner Logo]</div>
-    <div class="partner-logo-box">[Partner Logo]</div>
-    <div class="partner-logo-box">[Partner Logo]</div>
-    <div class="partner-logo-box">[Partner Logo]</div>
-  </div>
+  <p class="partner-strip-text">
+    <span data-en="Partnering with leading <em>international agricultural suppliers</em>" data-ar="بالشراكة مع كبرى <em>موردي المستلزمات الزراعية الدولية</em>">Partnering with leading <em>international agricultural suppliers</em></span>
+  </p>
 </div>
 
 <!-- ══ INSIGHTS TEASER ══ -->
 <section class="section section-white">
   <div class="section-title reveal">
-    <h2>Agricultural Insights</h2>
+    <h2 data-en="Agricultural Insights" data-ar="رؤى زراعية">Agricultural Insights</h2>
     <div class="accent-line"></div>
-    <p>Practical agronomic knowledge from the DAMAK field team — written for Egyptian growing conditions.</p>
+    <p data-en="Practical agronomic knowledge from the DAMAK field team — written for Egyptian growing conditions." data-ar="معرفة زراعية عملية من فريق دماك الميداني — مكتوبة لظروف الزراعة المصرية.">Practical agronomic knowledge from the DAMAK field team — written for Egyptian growing conditions.</p>
   </div>
   <div class="insights-grid">
     <div class="insight-card reveal d1">
       <div class="insight-card-thumb"></div>
       <div class="insight-card-body">
-        <span class="insight-label">Soil Management</span>
-        <h3>Preparing Your Soil Before the Spring Growth Phase</h3>
-        <p>Soil structure, drainage, and organic matter levels at planting time set the ceiling for everything else. Here's what to assess — and correct — before your spring crops go in.</p>
+        <span class="insight-label" data-en="Soil Management" data-ar="إدارة التربة">Soil Management</span>
+        <h3 data-en="Preparing Your Soil Before the Spring Growth Phase" data-ar="تجهيز التربة قبل مرحلة النمو الربيعي">Preparing Your Soil Before the Spring Growth Phase</h3>
+        <p data-en="Soil structure, drainage, and organic matter levels at planting time set the ceiling for everything else. Here's what to assess — and correct — before spring crops go in." data-ar="بنية التربة والصرف ومستويات المادة العضوية في وقت الزراعة تحدد سقف كل شيء آخر. إليك ما يجب تقييمه وتصحيحه قبل زراعة محاصيل الربيع.">Soil structure, drainage, and organic matter levels at planting time set the ceiling for everything else. Here's what to assess — and correct — before spring crops go in.</p>
       </div>
-      <div class="insight-card-foot"><a href="insights.html">Read more →</a></div>
+      <div class="insight-card-foot"><a href="insights.html" data-en="Read more →" data-ar="← اقرأ المزيد">Read more →</a></div>
     </div>
     <div class="insight-card reveal d2">
       <div class="insight-card-thumb"></div>
       <div class="insight-card-body">
-        <span class="insight-label">Plant Science</span>
-        <h3>Understanding Plant Growth Regulators: A Farmer's Guide</h3>
-        <p>PGRs are among the most powerful tools available to modern growers — but only when applied at the right growth stage, in the right concentration. We explain the basics.</p>
+        <span class="insight-label" data-en="Plant Science" data-ar="علوم النبات">Plant Science</span>
+        <h3 data-en="Understanding Plant Growth Regulators: A Farmer's Guide" data-ar="فهم منظمات نمو النبات: دليل المزارع">Understanding Plant Growth Regulators: A Farmer's Guide</h3>
+        <p data-en="PGRs are among the most powerful tools available to modern growers — but only when applied at the right growth stage, in the right concentration." data-ar="منظمات النمو من أقوى الأدوات المتاحة للمزارع الحديث — لكن فقط عند تطبيقها في مرحلة النمو الصحيحة وبالتركيز المناسب.">PGRs are among the most powerful tools available to modern growers — but only when applied at the right growth stage, in the right concentration.</p>
       </div>
-      <div class="insight-card-foot"><a href="insights.html">Read more →</a></div>
+      <div class="insight-card-foot"><a href="insights.html" data-en="Read more →" data-ar="← اقرأ المزيد">Read more →</a></div>
     </div>
     <div class="insight-card reveal d3">
       <div class="insight-card-thumb"></div>
       <div class="insight-card-body">
-        <span class="insight-label">Crop Nutrition</span>
-        <h3>Choosing the Right Fertilizer Programme for Your Crop</h3>
-        <p>There's no universal fertilizer schedule. Crop type, growth stage, soil baseline, and water quality all determine what your plants actually need. We break it down.</p>
+        <span class="insight-label" data-en="Crop Nutrition" data-ar="تغذية المحاصيل">Crop Nutrition</span>
+        <h3 data-en="Chelated Micronutrients: Why Form Matters as Much as Dose" data-ar="العناصر الصغرى المخلبية: لماذا الصيغة مهمة بقدر الجرعة">Chelated Micronutrients: Why Form Matters as Much as Dose</h3>
+        <p data-en="Not all micronutrient products are equal. The chelating agent determines how much iron, zinc, or manganese your crop actually absorbs — especially in Egypt's alkaline soils." data-ar="ليست كل منتجات العناصر الصغرى متساوية. العامل المُخلِّب يحدد كمية الحديد أو الزنك أو المنجنيز التي يمتصها نباتك فعلاً — خاصةً في التربة القلوية المصرية.">Not all micronutrient products are equal. The chelating agent determines how much iron, zinc, or manganese your crop actually absorbs — especially in Egypt's alkaline soils.</p>
       </div>
-      <div class="insight-card-foot"><a href="insights.html">Read more →</a></div>
+      <div class="insight-card-foot"><a href="insights.html" data-en="Read more →" data-ar="← اقرأ المزيد">Read more →</a></div>
     </div>
   </div>
   <div style="text-align:center; margin-top:2.5rem">
-    <a href="insights.html" class="btn btn-outline-dark btn-sm">All Insights →</a>
+    <a href="insights.html" class="btn btn-outline-dark btn-sm" data-en="All Insights →" data-ar="← جميع المقالات">All Insights →</a>
   </div>
 </section>
 
 <!-- ══ CTA BANNER ══ -->
 <div class="cta-banner">
-  <h2>Ready to Improve Your Yields?</h2>
-  <p>Talk to a DAMAK agronomist about the right product programme for your crop, soil, and season — at no cost.</p>
+  <h2 data-en="Ready to Improve Your Yields?" data-ar="هل أنت مستعد لتحسين إنتاجيتك؟">Ready to Improve Your Yields?</h2>
+  <p data-en="Talk to a DAMAK agronomist about the right product programme for your crop, soil, and season — at no cost." data-ar="تحدث مع مهندس زراعي من دماك حول برنامج المنتجات المناسب لمحصولك وتربتك وموسمك — بدون تكلفة.">Talk to a DAMAK agronomist about the right product programme for your crop, soil, and season — at no cost.</p>
   <div class="btn-group">
-    <a href="contact.html" class="btn btn-primary">Get in Touch</a>
-    <a href="products.html" class="btn btn-outline">Browse Products</a>
+    <a href="contact.html" class="btn btn-primary" data-en="Get in Touch" data-ar="تواصل معنا">Get in Touch</a>
+    <a href="products.html" class="btn btn-outline" data-en="Browse Products" data-ar="تصفح المنتجات">Browse Products</a>
   </div>
 </div>
 
@@ -368,49 +327,54 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <span class="logo">DAMAK<sup>®</sup></span>
-      <p>Advanced plant growth solutions and end-to-end agricultural development for Egypt's farming communities — since 2011.</p>
-      <span class="footer-tagline">Growing Egypt's Future</span>
+      <a href="index.html" style="display:inline-block">
+        <img src="assets/images/logo.png" alt="DAMAK" class="footer-logo-img"
+             onerror="this.outerHTML='<span class=footer-logo-text>DAMAK<sup>®</sup></span>'">
+      </a>
+      <p data-en="Advanced plant growth solutions and full-service agricultural development for Egypt's farming communities — since 2011." data-ar="حلول متقدمة لتنظيم نمو النبات وخدمات التنمية الزراعية الشاملة لمجتمعات المزارعين في مصر — منذ 2011.">Advanced plant growth solutions and full-service agricultural development for Egypt's farming communities — since 2011.</p>
+      <span class="footer-tagline" data-en="quality is our goal" data-ar="الجودة هي هدفنا">quality is our goal</span>
     </div>
     <div class="footer-col">
-      <h4>Products</h4>
+      <h4 data-en="Products" data-ar="المنتجات">Products</h4>
       <ul>
-        <li><a href="products.html#power-contanol">Power Contanol</a></li>
-        <li><a href="products.html#macovit-drw">Macovit DRW</a></li>
-        <li><a href="products.html#sinolide-one">Sinolide One</a></li>
-        <li><a href="products.html#trimax">Trimax</a></li>
-        <li><a href="products.html#damak-indole">Damak Indole</a></li>
-        <li><a href="products.html">View All →</a></li>
+        <li><a href="products.html#super-feneron" data-en="Super Feneron" data-ar="سوبر فينيرون">Super Feneron</a></li>
+        <li><a href="products.html#sinolide-one" data-en="Sinolide One" data-ar="سينولايد وان">Sinolide One</a></li>
+        <li><a href="products.html#algamax-forte" data-en="Algamax Forte" data-ar="الجوماكس فورتي">Algamax Forte</a></li>
+        <li><a href="products.html#fero-pro" data-en="Fero Pro" data-ar="فيرو برو">Fero Pro</a></li>
+        <li><a href="products.html#supra" data-en="Supra" data-ar="سوبرا">Supra</a></li>
+        <li><a href="products.html" data-en="View All 61 →" data-ar="← عرض الكل (61)">View All 61 →</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Company</h4>
+      <h4 data-en="Company" data-ar="الشركة">Company</h4>
       <ul>
-        <li><a href="about.html">About DAMAK</a></li>
-        <li><a href="about.html#timeline">Our History</a></li>
-        <li><a href="about.html#team">Leadership</a></li>
-        <li><a href="sustainability.html">Sustainability</a></li>
-        <li><a href="insights.html">Insights</a></li>
+        <li><a href="about.html" data-en="About DAMAK" data-ar="عن دماك">About DAMAK</a></li>
+        <li><a href="about.html#timeline" data-en="Our History" data-ar="تاريخنا">Our History</a></li>
+        <li><a href="about.html#team" data-en="Our Team" data-ar="فريقنا">Our Team</a></li>
+        <li><a href="sustainability.html" data-en="Sustainability" data-ar="الاستدامة">Sustainability</a></li>
+        <li><a href="insights.html" data-en="Insights" data-ar="مقالات">Insights</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Contact</h4>
+      <h4 data-en="Contact" data-ar="تواصل معنا">Contact</h4>
       <ul>
-        <li><a href="contact.html">Get in Touch</a></li>
-        <li><a href="contact.html#distributors">Find a Distributor</a></li>
-        <li><a href="mailto:amr12elabd@gmail.com">amr12elabd@gmail.com</a></li>
+        <li><a href="contact.html" data-en="Get in Touch" data-ar="تواصل معنا">Get in Touch</a></li>
+        <li><a href="contact.html#distributors" data-en="Find a Distributor" data-ar="ابحث عن موزع">Find a Distributor</a></li>
+        <li><a href="mailto:info@damakagro.com">info@damakagro.com</a></li>
+        <li><a href="tel:+20342638 87">+2 03 42 638 87</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <span class="copy">&copy; 2026 <em>DAMAK</em> Agricultural Development. All rights reserved.</span>
+    <span class="copy" data-en="© 2026 DAMAK For Agricultural Development. All rights reserved." data-ar="© 2026 دماك للتنمية الزراعية. جميع الحقوق محفوظة.">&copy; 2026 <em>DAMAK</em> For Agricultural Development. All rights reserved.</span>
     <div class="links">
-      <a href="sustainability.html">Sustainability</a>
-      <a href="contact.html">Contact</a>
+      <a href="sustainability.html" data-en="Sustainability" data-ar="الاستدامة">Sustainability</a>
+      <a href="contact.html" data-en="Contact" data-ar="تواصل معنا">Contact</a>
     </div>
   </div>
 </footer>
 
 <script src="assets/damak.js"></script>
+<script src="assets/js/translations.js"></script>
 </body>
 </html>

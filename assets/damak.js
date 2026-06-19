@@ -44,42 +44,17 @@
       });
       if (valid) {
         const btn = this.querySelector('.form-submit');
-        btn.textContent = '✓ Message sent — we\'ll be in touch within one business day.';
+        const isAr = document.documentElement.dir === 'rtl';
+        btn.textContent = isAr
+          ? '✓ تم إرسال رسالتك — سنتواصل معك في غضون يوم عمل.'
+          : '✓ Message sent — we\'ll be in touch within one business day.';
         btn.style.background = 'var(--green-mid)';
         btn.disabled = true;
       }
     });
   }
 
-  /* ── Lang toggle placeholder ── */
-  const langBtn = document.querySelector('.lang-toggle');
-  if (langBtn) {
-    langBtn.addEventListener('click', () => {
-      alert('Arabic version coming soon / النسخة العربية قريباً');
-    });
-  }
-
-  /* ── Product filter (products.html only) ── */
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  if (filterBtns.length) {
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const cat = btn.dataset.cat;
-        document.querySelectorAll('.product-card[data-cat]').forEach(card => {
-          if (cat === 'all' || card.dataset.cat === cat) {
-            card.style.display = '';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-        document.querySelectorAll('.coming-soon-banner').forEach(el => {
-          el.style.display = (cat !== 'all' && cat !== 'pgr') ? '' : 'none';
-        });
-      });
-    });
-  }
+  /* ── Lang toggle: handled by translations.js — no alert here ── */
 
   /* ── Smooth counter animation (stats) ── */
   const counters = document.querySelectorAll('.count-up');
